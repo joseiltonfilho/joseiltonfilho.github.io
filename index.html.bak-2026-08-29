@@ -130,11 +130,11 @@
 
       <div class="portrait-title">
         <h2 itemprop="name">José Ilton de Oliveira Filho</h2>
-        <h3 itemprop="jobTitle">Assistant Professor</h3>
+        <h3 itemprop="jobTitle">Research Scientist</h3>
         
         <h3 itemprop="worksFor">
-          <a href="https://www.ku.ac.ae" target="_blank">
-          Khalifa University
+          <a href="https://www.kaust.edu.sa" target="_blank">
+          KAUST - King Abdullah University of Science and Technology
           </a>
         </h3>
         
@@ -188,7 +188,7 @@
 <h1 id="hello">Hello!</h1>
 
 <div style="text-align: justify">
-   I am an Assistant Professor at Khalifa University in Abu Dhabi, UAE. My research focuses on embedded systems and digital hardware design for communication and biosensing applications &mdash; from self-powered optical wireless links (SLIPT) and underwater communication to AI-enabled electrochemical sensing platforms. Before joining Khalifa University in 2026, I was a Research Scientist at King Abdullah University of Science and Technology (KAUST), where I also served as Venture Lead in the Technology Innovation and Entrepreneurship (TIE) program, guiding DeepTech startup projects from lab to market.
+   I am a Research Scientist at King Abdullah University of Science and Technology (KAUST), focusing on embedded systems and digital design for communication and biosensing applications. Since 2025, I also served as the TIE Venture Lead in the Technology Innovation and Entrepreneurship (TIE) program.
 </div>
 
 
@@ -262,7 +262,7 @@
             <div class="description">
                 <p class="course">Bachelor of Science in Electrical Engineering, 2017</p>
                 <p class="institution">BME - Budapest University of Technology and Economics</p>
-                <p class="institution">UFPI - Universidade Federal do Piauí</p>
+                <p class="institution">UFPI - Universidade Federal do Piaui</p>
             </div>
           </li>
           
@@ -270,7 +270,7 @@
             <i class="fa-li fa fa-wrench"></i>
             <div class="description">
                 <p class="course">Environmental Health & Safety (EHS) Technicians , 2014</p>
-                <p class="institution">IFPI - Instituto Federal do Piauí</p>
+                <p class="institution">IFPI - Instituto Federal do Piaui</p>
             </div>
           </li>
           
@@ -278,7 +278,7 @@
             <i class="fa-li fa fa-wrench"></i>
             <div class="description">
                 <p class="course">Electronic Technician, 2012</p>
-                <p class="institution">IFPI - Instituto Federal do Piauí</p>
+                <p class="institution">IFPI - Instituto Federal do Piaui</p>
             </div>
           </li>
           
@@ -307,20 +307,14 @@
   </div>
   <div class="col-xs-12 col-md-8" style="height: 200px;overflow-y: scroll;">
       <ul>
-        <li>10.08.26: I joined Khalifa University in Abu Dhabi, UAE, as an Assistant Professor.</li>
-        <li>01.07.26: My first-author paper "Adaptive drop-deployable visible light communication-based underwater sensing probe" was published in npj Wireless Technology, a new Nature Portfolio journal. This work demonstrates a self-calibrating optical probe for underwater sensing that can be deployed by simply dropping it into the water.</li>
-        <li>01.06.26: During June and July, I was based in Shenzhen supporting the four KAUST TIE Venture teams during their 10-week phase at the Research Institute of Tsinghua University in Shenzhen (RITS), hosted at its Center of International Innovation for Technology and Science (CIITS).</li>
-        <li>01.06.26: New preprint on arXiv: "HHK: A Hardware-Oriented Cross-Location PPG Key Generation Architecture for Body Area Networks" &mdash; a step toward secure, lightweight key generation for wearable devices.</li>
-        <li>10.04.26: Our paper on high-speed detection of X-ray pulses using a digital counter coupled with perovskite composite scintillators was published in ACS Applied Materials &amp; Interfaces.</li>
-        <li>01.03.26: In collaboration with the University of S&atilde;o Paulo, our paper "Machine Learning-Assisted Infectious Disease Detection in Low-Income Areas: Toward Rapid Triage of Dengue and Zika Virus Using Open-Source Hardware" was published in Advanced Intelligent Discovery.</li>
-        <li>16.01.26: In collaboration with Prince Mohammed Bin Salman College (MBSC), we launched the first joint Integrated Management Competition (IMC), held under the patronage of the Alsulaiman Foundation. </li>
+        <li>16.01.26: In colaboration with Prince Mohammed Bin Salman College (MBSC), we launched the first joint Integrated Management Competition (IMC), held under the patronage of the Alsulaiman Foundation. </li>
         <li>01.01.26: I led the 2026 International Business Plan Competition at KAUST. Over 50 international students, from Saudi Arabia, Germany and China proposed innovative tech and business solutions with focused theme on Energy & Sustainability. </li>
         <li>07.12.25: We had the biggest event in the history of KAUST's TIE program: the TIE DEMO Day, in which 12 startup projects were demoed to the entire KAUST community. </li>
         <li>01.06.25: During June and July, I was based in Shenzhen supporting KAUST TIE Venture projects in transforming DeepTech ideas into commercially viable technologies. </li>
         <li>02.01.25: My startup was selected for the MIT's Sandbox and FUSE program, due to that I will be at MIT till mid-January. </li>
         <li>01.01.25: I was selected to be a mentor in the International Business Plan Competition, event organized by University of Illinois Urbana-Champaign. This year the event will be hosted in Austin, Texas, USA. </li>
         <li>22.10.24: I was session chair at IEEE Sensors 2024 in Kobe - Japan. </li>
-        <li>14.09.24: I presented a workshop on ARM Microcontrollers at KAUST as part of a joint project with the Autonomous Racing Car Team.</li>
+        <li>14.09.24: I presented a workshop on ARM Microcontrollers at KAUST as part of a join project with the Autonomous Racing Car Team.</li>
         <li>28.08.24: My research has been highlighted by several scientific news outlets, including my own University: <a class="btn btn-primary btn-outline btn-xs" href="https://discovery.kaust.edu.sa/en/article/24771/k2078_powering-the-future-of-the-internet-of-thi/">
             KAUST News
         </a>. Check out some of the news:<a class="btn btn-primary btn-outline btn-xs" href=" https://apnews.com/press-release/ein-presswire-newsmatics/georgia-86364c9b44c5bef5675c69d071034e2b"> AP News</a>, 
@@ -330,19 +324,20 @@
         <li>01.07.24: I started a new position at KAUST, as a Research Scientist under the Technology, Innovation, and Entrepreneurship (TIE) program.</li>
         <li>22.06.24: My paper published at IEEE Sensors Journal was selected to be presented at IEEE SENSORS 2024 Conference, the flagship conference from the IEEE Sensors Council.</li>
         <li>01.01.24: I traveled to Shenzhen-China to attend the KAUST-Shenzhen bootcamp for immersion into the Chinese hardware culture capital</li>
-        <li>18.12.23: I traveled for the Athar project, where I was the lead engineer taking care of many technologies that were developed by KAUST.
-            You can learn more about this incredible journey in <a class="btn btn-primary btn-outline btn-xs" href="http://athar.kaust.edu.sa">Athar Project</a>. 
-            In total, I stayed 15 days following the project from Dammam to AlUla, being responsible for the fitness monitoring sensor, 3D-printed on skin electrodes, smart helmet and IoT connection to the internet. 
+        <li>18.12.23: I traveled for the Athar project! Where I was the lead engineer taking care of many technologies that were developed by KAUST.
+            You can know more about this increadible journey in <a class="btn btn-primary btn-outline btn-xs" href="http://athar.kaust.edu.sa">Athar Project</a>. 
+            At total, I stayed 15 days following the project from Damman to AlUla, being responsible for the fitness monitoring sensor, 3D-printed on skin electrodes, smart helmet and IoT connection to the internet. 
         </li>
-        <li>29.10.23: I presented two demos at IEEE Sensors in Vienna. One as main author and another one as co-author.</li>
-        <li>01.10.23: I started a new position at KAUST-Neom, as a Postdoctoral Researcher.</li>
-        <li>01.09.23: Two first-author papers got accepted.</li>
-        <li>01.05.23: 2023 looks like a very promising year! I just got two awards for my project in the International Innovation Awards at the Malaysia Technology Expo 2023.
+        <li>29.10.23: I presented two demos at IEE Sensors in Vienna. One as main author and another one as co-author</li>
+        <li>01.10.23: I started a new position at KAUST-Neom, as a Postdoctoral Researcher</li>
+        <li>01.09.23: Two first author paper got accepcted</li>
+        <li>01.05.23: 2023 looks a very promissing year! I just got two awards for my project in the International Innovation Awards at the Malaysia Technology Expo 2023.
             Multiplexed Point of Care System won the Gold Award in the Healthcare category and also a special award from the International Alliance of Innovation and Invention Associations.
         </li>
-        <li>01.01.23: The year 2022 went excellently! I got two major awards: first place at Intel's InnovateFPGA competition, and a spot on the Dean's List for academic excellence at my university.
+        <li>01.01.23: The year 2022 went excellent! I got two major awards! The first place at Intel's InnovateFPGA competition, and I got on the Dean's List for academic excellence at my university.
+            I got two major awards! The first place at Intel's InnovateFPGA competition, and I got on the Dean's List for academic excellence at my university.
        </li>
-       <li>01.08.22: In August and September of this year I was invited to present my research work at Unicamp and UFRJ, both in Brazil, and in October I will present at IEEE Sensors Conference in Dallas - US.
+       <li>01.08.22:In August and September of this year I was invited to presented my research work at Unicamp and UFRJ, both in Brazil, and in October I will present at IEEE Sensors Conference at Dallas - US.
         </li>
         <li>01.07.22: My work has been featured in
             <a class="btn btn-primary btn-outline btn-xs" href="https://www.kaust.edu.sa/en/news/kaust-doctoral-student-wins-international-innovatefpga-design-contest-for-coral-medicine-project">
@@ -382,42 +377,6 @@
   </div>
   <div class="col-xs-12 col-md-8">
       <ul class="fa-ul">
-        <li itemscope itemtype="http://schema.org/CreativeWork">
-            <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-            <span itemprop="name">
-                Adaptive drop-deployable visible light communication-based underwater sensing probe
-            </span>
-            <p>
-                <a class="btn btn-primary btn-outline btn-xs" href="https://doi.org/10.1038/s44459-026-00065-8">
-                    Journal Paper
-                </a>
-            </p>
-        </li>
-
-        <li itemscope itemtype="http://schema.org/CreativeWork">
-            <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-            <span itemprop="name">
-                High-Speed Detection of X-ray Pulses Using a Digital Counter Coupled with Perovskite Composite Scintillators
-            </span>
-            <p>
-                <a class="btn btn-primary btn-outline btn-xs" href="https://doi.org/10.1021/acsami.5c26355">
-                    Journal Paper
-                </a>
-            </p>
-        </li>
-
-        <li itemscope itemtype="http://schema.org/CreativeWork">
-            <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-            <span itemprop="name">
-                HHK: A Hardware-Oriented Cross-Location PPG Key Generation Architecture for Body Area Networks
-            </span>
-            <p>
-                <a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/2605.24991">
-                    Preprint
-                </a>
-            </p>
-        </li>
-
         <li itemscope itemtype="http://schema.org/CreativeWork">
             <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
             <span itemprop="name">
@@ -676,30 +635,6 @@
           </li>
 
           <li itemscope itemtype="http://schema.org/CreativeWork">
-            <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-            <span itemprop="name">
-                Live Demonstration: Mobile Environmental Monitoring System
-            </span>
-            <p>
-                <a class="btn btn-primary btn-outline btn-xs" href="https://doi.org/10.1109/SENSORS56945.2023.10325150">
-                    Conference Paper
-                </a>
-            </p>
-        </li>
-
-        <li itemscope itemtype="http://schema.org/CreativeWork">
-            <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-            <span itemprop="name">
-                Live Demonstration: KAUSTat &mdash; A Compact Reconfigurable Electrochemical Station
-            </span>
-            <p>
-                <a class="btn btn-primary btn-outline btn-xs" href="https://doi.org/10.1109/SENSORS52175.2022.9967314">
-                    Conference Paper
-                </a>
-            </p>
-        </li>
-
-        <li itemscope itemtype="http://schema.org/CreativeWork">
               <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
               <span itemprop="name">Non-invasive IoT sensing and monitoring system for neonatal care</span>
               <p>
@@ -964,7 +899,7 @@
       
       <li>
         <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
-        <span><a href="mailto:joseilton.deoliveirafilho@ku.ac.ae">joseilton.deoliveirafilho@ku.ac.ae</a></span>
+        <span><a href="mailto:jose.deoliveirafilho@kaust.edu.sa">jose.deoliveirafilho@kaust.edu.sa</a></span>
       </li>
       
 
@@ -974,7 +909,7 @@
     
       <li>
         <i class="fa-li fa fa-map-marker fa-2x" aria-hidden="true"></i>
-        <span>Khalifa University, Abu Dhabi, United Arab Emirates</span>
+        <span>Building 3, Office 3203-WS23, Kaust, Thuwal, 23955, Saudi Arabia</span>
       </li>
       
 
