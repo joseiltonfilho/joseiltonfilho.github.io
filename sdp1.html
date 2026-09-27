@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme" content="hugo-academic">
+  <meta name="description" content="SDP1 team page">
+
+  <link rel="stylesheet" href="/css/highlight.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <title>SDP1</title>
+
+  <style>
+    .sdp h2 { margin-top: 48px; text-transform: none; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+    .sdp h3 { margin-top: 32px; text-transform: none; }
+    .sdp h4 { margin-top: 22px; font-weight: 700; }
+    .sdp p, .sdp li { font-size: 16px; line-height: 1.8; }
+    .sdp table { width: 100%; border-collapse: collapse; margin: 18px 0 28px; font-size: 15px; }
+    .sdp th, .sdp td { border: 1px solid #ddd; padding: 8px 10px; vertical-align: top; text-align: left; }
+    .sdp th { background: #f5f5f5; }
+    .sdp .box { background: #f7f9fb; border-left: 4px solid #2b6cb0; padding: 14px 18px; margin: 20px 0; }
+    .sdp .warn { background: #fff8e6; border-left: 4px solid #d69e2e; padding: 14px 18px; margin: 20px 0; }
+    .sdp .module { border: 1px solid #e3e3e3; border-radius: 8px; padding: 18px 22px; margin: 26px 0; }
+    .sdp .module h3 { margin-top: 0; }
+    .sdp .label { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: #2b6cb0; border-radius: 3px; padding: 2px 8px; margin-right: 6px; }
+    .sdp .label.b { background: #2f855a; }
+    .sdp code, .sdp pre { font-family: "Roboto Mono", monospace; font-size: 14px; }
+    .sdp pre { background: #f4f4f4; padding: 12px 14px; border-radius: 6px; overflow-x: auto; }
+    .sdp .toc { columns: 2; column-gap: 40px; }
+    .sdp .toc li { break-inside: avoid; }
+    .sdp .fill { color: #b7791f; font-weight: 700; }
+    @media (max-width: 767px) { .sdp .toc { columns: 1; } }
+
+    /* ---------- visual layer ---------- */
+    #readbar { position: fixed; top: 0; left: 0; height: 4px; width: 0; background: #2b6cb0; z-index: 2000; transition: width .1s linear; }
+    .sdp .fig { margin: 26px 0 34px; background: #fbfcfd; border: 1px solid #e6eaf0; border-radius: 10px; padding: 14px 16px 10px; }
+    .sdp .fig svg { width: 100%; height: auto; display: block; }
+    .sdp .fig .cap { font-size: 14px; color: #555; margin: 10px 4px 0; line-height: 1.6; }
+    .sdp .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .sdp .reveal.on { opacity: 1; transform: none; }
+    .sdp .module h3 { cursor: pointer; user-select: none; }
+    .sdp .module h3::after { content: "\2212"; float: right; color: #999; font-weight: 400; }
+    .sdp .module.closed h3::after { content: "+"; }
+    .sdp .module.closed > *:not(h3) { display: none; }
+    #minitoc { position: fixed; right: 18px; top: 110px; width: 190px; font-size: 12.5px; line-height: 1.5; border-left: 2px solid #e6eaf0; padding-left: 12px; display: none; z-index: 10; }
+    #minitoc a { color: #777; text-decoration: none; display: block; padding: 2px 0; }
+    #minitoc a.cur { color: #2b6cb0; font-weight: 700; }
+    @media (min-width: 1360px) { #minitoc { display: block; } }
+    .f-txt { font-family: "Lato", sans-serif; font-size: 12px; fill: #444; }
+    .f-lbl { font-family: "Lato", sans-serif; font-size: 11px; fill: #777; }
+    .f-mono { font-family: "Roboto Mono", monospace; font-size: 11px; fill: #2b6cb0; }
+    @keyframes scrollx { from { transform: translateX(0); } to { transform: translateX(-120px); } }
+    @keyframes ripple { 0% { r: 6; opacity: .9; } 100% { r: 150; opacity: 0; } }
+    @keyframes blink { 0%,100% { opacity: .15; } 50% { opacity: 1; } }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes peak { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(1.25); } }
+    @keyframes dash { to { stroke-dashoffset: -40; } }
+  </style>
+
+</head>
+<body id="top">
+<div id="readbar"></div>
+<nav id="minitoc" aria-label="Sections"></nav>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"><a href="/#about"><span>Home</span></a></li>
+        <li class="nav-item"><a href="/#news"><span>News</span></a></li>
+        <li class="nav-item"><a href="/#publications"><span>Publications</span></a></li>
+        <li class="nav-item"><a href="/#competitions"><span>Honors and Awards</span></a></li>
+        <li class="nav-item"><a href="/current-projects.html"><span>Current Projects</span></a></li>
+        <li class="nav-item"><a href="/#tutorials"><span>Tutorials</span></a></li>
+        <li class="nav-item"><a href="/#contact"><span>Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<article class="article sdp" itemscope itemtype="http://schema.org/Article">
+  <div class="article-container">
+
+    <h1 itemprop="name">SDP1 Team Page</h1>
+
+    <div class="box">
+      This page is a course, written for you. It starts from zero and goes, in order, through what a radio signal is, what Wi-Fi is, how a software-defined radio works, what an RF fingerprint is, and then through the hands-on steps of the project, with reading and exercises at every step. Read it top to bottom. Where a section says "read", the reading is not optional; the exercise after it will not make sense without it.
+    </div>
+
+    <h2>Contents</h2>
+    <ol class="toc">
+      <li><a href="#basics">0. The basics, before anything else</a></li>
+      <li><a href="#overview">1. What the project is</a></li>
+      <li><a href="#tracks">2. Key dates</a></li>
+      <li><a href="#hardware">3. Hardware</a></li>
+      <li><a href="#competition">4. The competition, and how it joins the project</a></li>
+      <li><a href="#modules">5. Learning modules, step by step</a></li>
+      <li><a href="#challenge">6. ATRC EDGE Challenge</a></li>
+      <li><a href="#reading">7. Reading list</a></li>
+      <li><a href="#glossary">8. Glossary</a></li>
+    </ol>
+
+    <!-- ===================================================== -->
+    <h2 id="basics">0. The basics, before anything else</h2>
+
+    <p>Read this section first, even if some of it looks familiar. Every later section uses these words and assumes you know what they mean.</p>
+
+    <h3>What a signal is</h3>
+    <p>A signal is any quantity that changes with time and carries information. The voltage on a microphone wire is a signal, and so is the brightness of a pixel over time or the current in an antenna. In this project a signal is always a list of numbers, one per instant of time, taken at a fixed rate. If you take 20 million numbers per second, the sample rate is 20 megasamples per second (20 Msps). The most useful way to look at a signal is to ask which frequencies it contains, and the mathematical tool for that is the Fourier transform (FFT). A plot of "how much energy at each frequency" is a spectrum, and a spectrum plotted over time, with colour for energy, is a spectrogram. You will make dozens of spectrograms in this project. <a href="https://pysdr.org/content/frequency_domain.html" target="_blank">PySDR chapter 2</a> explains all of this with code.</p>
+    <div class="fig ">
+      <svg viewBox="0 0 760 130" role="img" aria-label="A noisy signal in time and its spectrum">
+        <text class="f-txt" x="120" y="16" text-anchor="middle">time domain (what the radio gives you)</text>
+        <clipPath id="c1"><rect x="10" y="20" width="230" height="80"/></clipPath>
+        <g clip-path="url(#c1)">
+          <g style="animation: scrollx 4s linear infinite;">
+            <path d="M0,40.0 L1,51.4 L2,52.2 L3,56.0 L4,65.4 L5,62.9 L6,54.1 L7,55.5 L8,51.9 L9,35.3 L10,30.2 L11,32.1 L12,18.9 L13,12.5 L14,24.4 L15,23.3 L16,18.1 L17,36.0 L18,46.8 L19,40.0 L20,53.1 L21,68.6 L22,56.6 L23,55.4 L24,68.6 L25,53.3 L26,37.1 L27,46.9 L28,37.0 L29,14.2 L30,23.4 L31,27.8 L32,8.9 L33,18.2 L34,38.2 L35,28.0 L36,32.5 L37,59.2 L38,55.3 L39,48.0 L40,69.2 L41,67.7 L42,47.0 L43,55.4 L44,56.8 L45,30.2 L46,27.8 L47,36.4 L48,16.5 L49,10.0 L50,27.9 L51,23.0 L52,16.7 L53,38.8 L54,47.0 L55,39.6 L56,55.4 L57,67.8 L58,56.2 L59,57.5 L60,66.2 L61,51.8 L62,40.0 L63,43.9 L64,33.8 L65,18.6 L66,21.7 L67,22.9 L68,14.6 L69,19.6 L70,31.7 L71,33.2 L72,37.5 L73,51.5 L74,57.7 L75,56.1 L76,61.3 L77,65.4 L78,56.8 L79,49.3 L80,49.4 L81,40.3 L82,26.0 L83,25.5 L84,25.1 L85,14.0 L86,15.9 L87,28.4 L88,26.1 L89,27.9 L90,47.5 L91,52.3 L92,47.3 L93,62.3 L94,69.0 L95,53.7 L96,55.7 L97,62.2 L98,41.3 L99,30.9 L100,40.1 L101,25.0 L102,9.6 L103,24.7 L104,24.9 L105,11.0 L106,29.2 L107,44.8 L108,33.4 L109,45.4 L110,67.7 L111,56.0 L112,52.8 L113,71.6 L114,59.6 L115,40.5 L116,51.6 L117,44.8 L118,19.0 L119,24.8 L120,30.4 L121,10.0 L122,14.1 L123,33.4 L124,25.0 L125,26.2 L126,51.3 L127,52.4 L128,46.0 L129,64.6 L130,68.6 L131,52.5 L132,57.0 L133,60.3 L134,40.0 L135,32.6 L136,37.4 L137,23.3 L138,13.2 L139,22.5 L140,22.2 L141,16.6 L142,28.9 L143,40.3 L144,39.5 L145,47.7 L146,60.8 L147,60.4 L148,57.9 L149,63.0 L150,60.2 L151,48.2 L152,43.3 L153,41.0 L154,28.7 L155,19.6 L156,22.7 L157,20.6 L158,14.2 L159,23.0 L160,33.9 L161,32.0 L162,39.7 L163,57.0 L164,56.1 L165,53.7 L166,67.1 L167,64.7 L168,48.9 L169,52.9 L170,51.9 L171,29.4 L172,26.0 L173,33.1 L174,16.0 L175,10.1 L176,28.4 L177,24.8 L178,18.1 L179,41.8 L180,50.7 L181,40.0 L182,57.2 L183,71.4 L184,54.0 L185,55.4 L186,68.7 L187,48.0 L188,33.9 L189,46.0 L190,31.9 L191,11.2 L192,24.6 L193,26.1 L194,8.5 L195,22.8 L196,40.1 L197,29.3 L198,38.2 L199,62.1 L200,55.2 L201,51.5 L202,70.0 L203,64.0 L204,46.7 L205,54.1 L206,50.6 L207,27.8 L208,27.1 L209,31.3 L210,15.1 L211,12.8 L212,26.6 L213,23.8 L214,22.8 L215,40.6 L216,48.1 L217,45.9 L218,57.2 L219,66.0 L220,59.2 L221,57.4 L222,60.5 L223,51.0 L224,38.9 L225,36.9 L226,31.6 L227,19.6 L228,17.3 L229,22.1 L230,19.4 L231,19.5 L232,32.5 L233,40.3 L234,39.9 L235,51.4 L236,63.2 L237,57.8 L238,57.7 L239,66.6 L240,56.5 L241,42.8 L242,47.2 L243,39.8 L244,19.8 L245,23.0 L246,27.3 L247,11.5 L248,15.5 L249,33.9 L250,27.7 L251,28.9 L252,53.8 L253,55.0 L254,46.7 L255,65.9 L256,69.9 L257,49.6 L258,55.1 L259,60.9 L260,35.2 L261,28.3 L262,39.4 L263,20.4 L264,8.3 L265,27.2 L266,24.1 L267,12.3 L268,34.7 L269,46.7 L270,35.2 L271,50.9 L272,69.1 L273,55.1 L274,55.2 L275,70.5 L276,54.9 L277,39.7 L278,49.2 L279,38.7 L280,17.6 L281,24.4 L282,26.4 L283,10.8 L284,17.7 L285,32.9 L286,27.6 L287,32.5 L288,52.4 L289,53.9 L290,51.5 L291,64.4 L292,66.1 L293,54.6 L294,54.6 L295,54.1 L296,39.4 L297,30.6 L298,30.9 L299,23.0 L300,14.5 L301,19.0 L302,23.8 L303,22.1 L304,28.8 L305,42.6 L306,46.6 L307,48.5 L308,60.5 L309,65.1 L310,57.2 L311,58.5 L312,61.1 L313,46.1 L314,36.3 L315,39.8 L316,28.0 L317,14.0 L318,22.5 L319,23.7 L320,12.4 L321,24.8 L322,40.3 L323,33.1 L324,41.4 L325,63.2 L326,57.1 L327,52.2 L328,69.9 L329,63.4 L330,43.7 L331,52.1 L332,49.6 L333,23.2 L334,24.6 L335,32.9 L336,12.3 L337,10.9 L338,32.0 L339,24.7 L340,20.8 L341,47.6 L342,52.1 L343,41.8 L344,61.8 L345,71.1 L346,52.1 L347,56.6 L348,65.9 L349,42.9 L350,33.0 L351,43.0 L352,26.6 L353,11.2 L354,24.7 L355,23.5 L356,11.2 L357,27.0 L358,40.2 L359,33.1 L360,44.0" fill="none" stroke="#2b6cb0" stroke-width="1.6"/>
+          </g>
+        </g>
+        <line x1="10" y1="100" x2="240" y2="100" stroke="#bbb"/>
+        <text class="f-lbl" x="240" y="114" text-anchor="end">time</text>
+        <path d="M270 62 L330 62" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+        <text class="f-lbl" x="300" y="52" text-anchor="middle">FFT</text>
+        <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#999"/></marker></defs>
+        <text class="f-txt" x="530" y="16" text-anchor="middle">frequency domain (which frequencies are inside)</text>
+        <line x1="360" y1="100" x2="740" y2="100" stroke="#bbb"/>
+        <g fill="#c5d5ea">
+          <rect x="370" y="88" width="10" height="12"/><rect x="386" y="84" width="10" height="16"/><rect x="402" y="90" width="10" height="10"/>
+          <rect x="418" y="86" width="10" height="14"/><rect x="450" y="80" width="10" height="20"/><rect x="466" y="89" width="10" height="11"/>
+          <rect x="530" y="86" width="10" height="14"/><rect x="546" y="82" width="10" height="18"/><rect x="580" y="90" width="10" height="10"/>
+          <rect x="612" y="88" width="10" height="12"/><rect x="644" y="85" width="10" height="15"/><rect x="676" y="90" width="10" height="10"/><rect x="708" y="87" width="10" height="13"/>
+        </g>
+        <g style="transform-origin: 439px 100px; animation: peak 2s ease-in-out infinite;"><rect x="434" y="30" width="10" height="70" fill="#2b6cb0"/></g>
+        <g style="transform-origin: 503px 100px; animation: peak 2s ease-in-out infinite .7s;"><rect x="498" y="56" width="10" height="44" fill="#2f855a"/></g>
+        <text class="f-lbl" x="439" y="114" text-anchor="middle">f1</text>
+        <text class="f-lbl" x="503" y="114" text-anchor="middle">f2</text>
+        <text class="f-lbl" x="740" y="114" text-anchor="end">frequency</text>
+      </svg>
+      <div class="cap">Left, a signal as the radio delivers it, a list of numbers against time; the noise hides what is inside. Right, the same signal after an FFT: two clear peaks at the two frequencies it contains. A spectrogram is this right-hand picture repeated many times per second and coloured.</div>
+    </div>
+
+    <h3>What RF is</h3>
+    <p>RF means radio frequency. A radio wave is an electromagnetic wave, the same physical thing as light, but oscillating much more slowly, from a few kilohertz up to a few hundred gigahertz. A transmitter creates such a wave by driving an alternating current into an antenna; a receiver does the opposite, the wave induces a tiny current in its antenna, which is amplified and turned into numbers. The frequency of the wave is what separates one radio service from another. FM radio is around 100 MHz, 4G phones use bands between about 700 MHz and 2.6 GHz, Wi-Fi uses 2.4 GHz and 5 GHz, GPS is at 1.575 GHz. When we say a receiver is "tuned to 2412 MHz" we mean it is listening to a slice of spectrum centred on that frequency. The width of that slice is the bandwidth. A general overview is on <a href="https://en.wikipedia.org/wiki/Radio_frequency" target="_blank">Wikipedia, Radio frequency</a>.</p>
+    <div class="fig ">
+      <svg viewBox="0 0 760 150" role="img" aria-label="A radio wave travelling from a transmitter antenna to a receiver antenna">
+        <line x1="90" y1="120" x2="90" y2="40" stroke="#444" stroke-width="3"/><circle cx="90" cy="40" r="4" fill="#444"/>
+        <rect x="70" y="120" width="40" height="14" fill="#666"/><text class="f-txt" x="90" y="147" text-anchor="middle">transmitter (ESP32)</text>
+        <g stroke="#2b6cb0" fill="none" stroke-width="1.5">
+          <circle cx="90" cy="40" r="6" style="animation: ripple 3s linear infinite;"/>
+          <circle cx="90" cy="40" r="6" style="animation: ripple 3s linear infinite .75s;"/>
+          <circle cx="90" cy="40" r="6" style="animation: ripple 3s linear infinite 1.5s;"/>
+          <circle cx="90" cy="40" r="6" style="animation: ripple 3s linear infinite 2.25s;"/>
+        </g>
+        <line x1="660" y1="120" x2="660" y2="40" stroke="#444" stroke-width="3"/><circle cx="660" cy="40" r="4" fill="#444"/>
+        <rect x="640" y="120" width="40" height="14" fill="#666"/><text class="f-txt" x="660" y="147" text-anchor="middle">receiver (SDR)</text>
+        <text class="f-lbl" x="375" y="24" text-anchor="middle">an electromagnetic wave, 2,412,000,000 swings per second</text>
+        <path d="M250 80 Q262 40 274 80 T298 80 T322 80 T346 80 T370 80 T394 80 T418 80 T442 80 T466 80 T490 80" fill="none" stroke="#2b6cb0" stroke-width="2" stroke-dasharray="6 4" style="animation: dash 1s linear infinite;"/>
+        <text class="f-lbl" x="375" y="108" text-anchor="middle">what changes from moment to moment (its size and its timing) is the information</text>
+      </svg>
+      <div class="cap">The transmitter drives a current into its antenna and a wave leaves it in all directions. The receiver's antenna catches a tiny part of it. The wave itself is always the same fast swing; the information sits in how its amplitude and phase are changed over time.</div>
+    </div>
+
+    <h3>What Wi-Fi is</h3>
+    <p>Wi-Fi is the family of standards (IEEE 802.11) that laptops, phones and the ESP32 use to send data over radio. In the 2.4 GHz band it is divided into channels about 20 MHz wide; channel 1 is centred at 2412 MHz, channel 6 at 2437 MHz, channel 11 at 2462 MHz. Data is sent in packets, short bursts of radio energy lasting from tens of microseconds to a few milliseconds, with silence between them. Every packet starts with a preamble, a fixed pattern that is identical for every device, which the receiver uses to lock on. The bits after the preamble are encoded with a modulation scheme (OFDM for most Wi-Fi), which you do not need to decode in this project, since we look at how the radio wave was produced, not at what it says. An access point (like your home router, or an ESP32 configured as one) sends a beacon packet at regular intervals to announce itself; those beacons are the bursts our transmitters will produce. <a href="https://en.wikipedia.org/wiki/IEEE_802.11" target="_blank">Wikipedia, IEEE 802.11</a> has the channel tables and history.</p>
+    <div class="fig ">
+      <svg viewBox="0 0 760 170" role="img" aria-label="Structure of a Wi-Fi packet and beacons on a timeline">
+        <text class="f-txt" x="10" y="16">one Wi-Fi packet, from the first bit to the last</text>
+        <rect x="10" y="26" width="150" height="34" fill="#2b6cb0"/><text class="f-txt" x="85" y="47" text-anchor="middle" fill="#fff" style="fill:#fff">preamble</text>
+        <rect x="160" y="26" width="110" height="34" fill="#5a8fd0"/><text class="f-txt" x="215" y="47" text-anchor="middle" style="fill:#fff">header</text>
+        <rect x="270" y="26" width="440" height="34" fill="#c5d5ea"/><text class="f-txt" x="490" y="47" text-anchor="middle">payload (the data)</text>
+        <rect x="710" y="26" width="40" height="34" fill="#9fb8dc"/><text class="f-lbl" x="730" y="47" text-anchor="middle">check</text>
+        <text class="f-lbl" x="85" y="76" text-anchor="middle">identical for every device</text>
+        <text class="f-lbl" x="85" y="90" text-anchor="middle">so differences come from hardware</text>
+        <text class="f-lbl" x="490" y="76" text-anchor="middle">what the network cares about; we ignore it</text>
+        <text class="f-txt" x="10" y="118">beacons: an access point announces itself at a fixed interval</text>
+        <line x1="10" y1="150" x2="750" y2="150" stroke="#bbb"/>
+        <g fill="#2f855a">
+          <rect x="30" y="130" width="8" height="20" style="animation: blink 3s linear infinite 0s;"/>
+          <rect x="130" y="130" width="8" height="20" style="animation: blink 3s linear infinite .4s;"/>
+          <rect x="230" y="130" width="8" height="20" style="animation: blink 3s linear infinite .8s;"/>
+          <rect x="330" y="130" width="8" height="20" style="animation: blink 3s linear infinite 1.2s;"/>
+          <rect x="430" y="130" width="8" height="20" style="animation: blink 3s linear infinite 1.6s;"/>
+          <rect x="530" y="130" width="8" height="20" style="animation: blink 3s linear infinite 2s;"/>
+          <rect x="630" y="130" width="8" height="20" style="animation: blink 3s linear infinite 2.4s;"/>
+          <rect x="730" y="130" width="8" height="20" style="animation: blink 3s linear infinite 2.8s;"/>
+        </g>
+        <text class="f-lbl" x="84" y="165" text-anchor="middle">100 ms</text>
+        <text class="f-lbl" x="750" y="165" text-anchor="end">time</text>
+      </svg>
+      <div class="cap">Top, the parts of a packet. The preamble is the same for every device, which is why the way it arrives reveals the hardware that sent it. Bottom, beacons: short packets an access point sends at a regular interval, with silence in between. Each beacon carries a timestamp from the sender's own clock.</div>
+    </div>
+
+    <h3>What an SDR is</h3>
+    <p>A normal radio, such as the Wi-Fi chip in your laptop, does everything in fixed hardware and only gives you the decoded data. A software-defined radio (SDR) stops one step earlier. It tunes to a frequency, filters a slice of bandwidth, converts the wave to numbers, and sends the raw numbers to your computer over USB. Everything else happens in software you write. The numbers come as pairs, called I and Q, which together are one complex number per sample. That is why files in this project are arrays of complex numbers. Our SDR is the ADALM-Pluto. <a href="https://pysdr.org/content/intro.html" target="_blank">PySDR chapter 1</a> and <a href="https://pysdr.org/content/sampling.html" target="_blank">chapter 3</a> cover what an SDR is and what IQ means.</p>
+    <div class="fig ">
+      <svg viewBox="0 0 760 130" role="img" aria-label="Signal path inside a software-defined radio">
+        <defs><path id="p4" d="M60 60 L170 60 L300 60 L430 60 L560 60 L690 60"/></defs>
+        <line x1="60" y1="100" x2="60" y2="30" stroke="#444" stroke-width="3"/><circle cx="60" cy="30" r="4" fill="#444"/><text class="f-lbl" x="60" y="118" text-anchor="middle">antenna</text>
+        <g stroke="#2b6cb0" fill="#fff" stroke-width="1.5">
+          <rect x="120" y="40" width="100" height="40" rx="6"/><rect x="250" y="40" width="100" height="40" rx="6"/><rect x="380" y="40" width="100" height="40" rx="6"/><rect x="510" y="40" width="100" height="40" rx="6"/>
+        </g>
+        <text class="f-txt" x="170" y="57" text-anchor="middle">tuner</text><text class="f-lbl" x="170" y="72" text-anchor="middle">pick 2412 MHz</text>
+        <text class="f-txt" x="300" y="57" text-anchor="middle">filter</text><text class="f-lbl" x="300" y="72" text-anchor="middle">keep 20 MHz</text>
+        <text class="f-txt" x="430" y="57" text-anchor="middle">ADC</text><text class="f-lbl" x="430" y="72" text-anchor="middle">wave to numbers</text>
+        <text class="f-txt" x="560" y="57" text-anchor="middle">USB</text><text class="f-lbl" x="560" y="72" text-anchor="middle">to the laptop</text>
+        <rect x="640" y="36" width="100" height="48" rx="6" fill="#f4f4f4" stroke="#bbb"/>
+        <text class="f-mono" x="690" y="55" text-anchor="middle">0.12+0.31j</text><text class="f-mono" x="690" y="70" text-anchor="middle">-0.08+0.27j</text>
+        <text class="f-lbl" x="690" y="100" text-anchor="middle">your Python code</text>
+        <circle r="5" fill="#2f855a"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
+        <circle r="5" fill="#2f855a"><animateMotion dur="4s" begin="1.3s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
+        <circle r="5" fill="#2f855a"><animateMotion dur="4s" begin="2.6s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
+      </svg>
+      <div class="cap">A normal Wi-Fi chip does all of this and then decodes the bits and throws the wave away. An SDR stops after the ADC and hands you the numbers, one complex number per sample, so that everything from that point on is your own software.</div>
+    </div>
+
+    <h3>What I and Q are</h3>
+    <p>A radio wave at 2412 MHz is a sine wave that swings up and down 2,412 million times per second. The information is not in that fast swing itself, which is the same for every packet, but in how its size and its timing are being changed from moment to moment. The size is the amplitude. The timing, meaning how far ahead or behind the wave is compared with a perfect reference sine, is the phase. The receiver strips away the fast swing and keeps only those two slowly changing things, and it does so by producing two numbers per instant. I is how much of the wave lines up with a reference cosine; Q is how much lines up with the same reference shifted by a quarter of a cycle. Think of a clock face with the hand pointing somewhere: I is how far the tip of the hand is to the right, Q is how far it is up. From I and Q together you get the length of the hand, which is the amplitude, and the angle of the hand, which is the phase. One (I, Q) pair is one sample, and a capture is just a long list of these pairs. In Python we store each pair as one complex number, I plus Q times the imaginary unit, only because complex numbers make the maths shorter; there is nothing "imaginary" about Q, it is a measured voltage like I. If the transmitter's crystal is slightly off frequency, the hand rotates slowly on its own, and that rotation rate is the carrier frequency offset, our first fingerprint feature.</p>
+    <div class="fig ">
+      <svg id="iqfig" viewBox="0 0 760 240" role="img" aria-label="The I and Q clock hand">
+        <circle cx="130" cy="120" r="90" fill="#fff" stroke="#ccc"/>
+        <line x1="30" y1="120" x2="230" y2="120" stroke="#ddd"/><line x1="130" y1="20" x2="130" y2="220" stroke="#ddd"/>
+        <text class="f-lbl" x="236" y="124">I</text><text class="f-lbl" x="126" y="14">Q</text>
+        <line id="iq-hand" x1="130" y1="120" x2="220" y2="120" stroke="#2b6cb0" stroke-width="3"/>
+        <line id="iq-i" x1="130" y1="120" x2="220" y2="120" stroke="#2f855a" stroke-width="3"/>
+        <line id="iq-q" x1="220" y1="120" x2="220" y2="120" stroke="#d69e2e" stroke-width="3"/>
+        <circle id="iq-tip" cx="220" cy="120" r="5" fill="#2b6cb0"/>
+        <text class="f-txt" x="130" y="236" text-anchor="middle">one sample = where the hand points</text>
+        <text class="f-txt" x="300" y="40">I  (how far right)</text>
+        <polyline id="iq-ti" fill="none" stroke="#2f855a" stroke-width="2" points=""/>
+        <line x1="300" y1="80" x2="740" y2="80" stroke="#ddd"/>
+        <text class="f-txt" x="300" y="140">Q  (how far up)</text>
+        <polyline id="iq-tq" fill="none" stroke="#d69e2e" stroke-width="2" points=""/>
+        <line x1="300" y1="180" x2="740" y2="180" stroke="#ddd"/>
+        <text class="f-lbl" x="740" y="226" text-anchor="end">time (one point per sample)</text>
+        <text id="iq-txt" class="f-mono" x="300" y="226">I = 1.00   Q = 0.00</text>
+      </svg>
+      <div class="cap">The hand turns as the wave's phase advances. I is its shadow on the horizontal axis, Q its shadow on the vertical axis. Length of the hand is the amplitude, angle is the phase. On the right, I and Q recorded sample after sample; those two lists are what a capture file contains. A transmitter whose crystal is slightly off frequency makes the hand turn slightly faster or slower than expected, and that extra turning rate is the carrier frequency offset.</div>
+    </div>
+
+    <h3>What identification means here, and why the usual way fails</h3>
+    <p>Identification means answering the question "which device sent this?". Networks normally answer it with a name the device declares about itself, such as its MAC address (a 48-bit number burned into the Wi-Fi chip but trivially changed in software), or a password or certificate. All of these are things the device says. A device that lies, by copying another device's MAC address or stolen credentials, is accepted. That is called spoofing. Authentication that depends only on what the device claims cannot detect a good copy.</p>
+
+    <h3>What an RF fingerprint is</h3>
+    <p>Two ESP32 boards from the same batch run the same firmware and send the same bits, but the analog parts that produce the radio wave (the crystal oscillator, the mixer, the filters, the power amplifier) are made with manufacturing tolerances. One crystal runs 3 kHz high, another 1 kHz low. One amplifier turns on a little slower. One board's I and Q paths differ in gain by half a percent. None of this affects the data, so nobody corrects it, but all of it leaves a measurable trace in the raw IQ samples. The set of these traces is the device's RF fingerprint. It comes from physics, not from a setting, so it cannot be changed by software and is very hard to copy. Identifying a device by this fingerprint is RF fingerprinting, first demonstrated on ordinary Wi-Fi cards in 2008 [1]. The features people measure fall into two groups, transient features taken from the first microseconds when the transmitter switches on, and steady-state features such as carrier frequency offset and I/Q imbalance taken from the body of the packet [2]. Modern systems skip hand-made features and let a neural network learn the fingerprint from raw IQ [3].</p>
+    <div class="fig ">
+      <svg viewBox="0 0 760 170" role="img" aria-label="Two identical boards whose clocks drift differently">
+        <g>
+          <rect x="40" y="30" width="200" height="100" rx="8" fill="#eef3f8" stroke="#9fb8dc"/><text class="f-txt" x="140" y="20" text-anchor="middle">board 01, same firmware, same bits</text>
+          <rect x="60" y="60" width="50" height="40" rx="4" fill="#fff" stroke="#999"/><text class="f-lbl" x="85" y="84" text-anchor="middle">crystal</text>
+          <circle cx="180" cy="80" r="32" fill="#fff" stroke="#999"/>
+          <line x1="180" y1="80" x2="180" y2="54" stroke="#2b6cb0" stroke-width="3" style="transform-origin:180px 80px; animation: spin 4s linear infinite;"/>
+          <text class="f-mono" x="140" y="150" text-anchor="middle">2,412,000,000 + 3,100 Hz</text>
+        </g>
+        <g>
+          <rect x="520" y="30" width="200" height="100" rx="8" fill="#eef3f8" stroke="#9fb8dc"/><text class="f-txt" x="620" y="20" text-anchor="middle">board 02, same firmware, same bits</text>
+          <rect x="540" y="60" width="50" height="40" rx="4" fill="#fff" stroke="#999"/><text class="f-lbl" x="565" y="84" text-anchor="middle">crystal</text>
+          <circle cx="660" cy="80" r="32" fill="#fff" stroke="#999"/>
+          <line x1="660" y1="80" x2="660" y2="54" stroke="#d69e2e" stroke-width="3" style="transform-origin:660px 80px; animation: spin 4.6s linear infinite;"/>
+          <text class="f-mono" x="620" y="150" text-anchor="middle">2,412,000,000 - 1,400 Hz</text>
+        </g>
+        <text class="f-txt" x="380" y="70" text-anchor="middle">no two crystals are cut exactly alike</text>
+        <text class="f-lbl" x="380" y="88" text-anchor="middle">the data is identical, the wave is not</text>
+        <text class="f-lbl" x="380" y="104" text-anchor="middle">watch the two hands drift apart</text>
+      </svg>
+      <div class="cap">Two boards from the same batch running the same program. Their crystals differ by a few parts per million, so one transmits a little above the nominal frequency and the other a little below, and their clocks drift apart over time. The data is unaffected, so nothing corrects it, and it becomes a signature of the board.</div>
+    </div>
+
+    <h3>How this project uses it</h3>
+    <p>We buy ten identical ESP32 boards and make them transmit identical beacons. We record the raw IQ of those beacons with the Pluto. We then try to tell the ten boards apart from the recordings alone, first with simple measured features, later with a neural network. If it works, we have a way to identify a device that does not depend on anything the device claims. The hard part, and the research question, is whether the fingerprint learned on one day at one place still works on another day at another place [6][8].</p>
+
+    <!-- ===================================================== -->
+    <h2 id="overview">1. What the project is</h2>
+
+    <p>Every radio transmitter carries a unique physical-layer signature caused by unavoidable manufacturing tolerances in its analog front end, such as carrier frequency offset, I/Q imbalance, power-amplifier nonlinearity and the shape of the turn-on transient. RF fingerprinting exploits these impairments to identify a specific device, even among units of the same make and model, and so provides a hardware-rooted layer of security that cannot be spoofed by changing MAC addresses or credentials. The idea was demonstrated on commercial Wi-Fi cards as early as 2008 [1], and the field has since moved from hand-designed features [2] to deep learning on raw IQ samples [3]. Applications include counter-drone systems (identifying which controller is transmitting), IoT device authentication and spectrum security.</p>
+
+    <p>In this project you will build a complete RF fingerprinting system in four work packages.</p>
+    <ol>
+      <li><strong>Capture.</strong> A software-defined-radio pipeline that records IQ samples from a set of 10 physically identical ESP32 transmitter modules under controlled conditions.</li>
+      <li><strong>Classify.</strong> A signal-processing stage that extracts device-specific features, and a deep-learning classifier that operates directly on raw IQ data.</li>
+      <li><strong>Deploy.</strong> The trained, quantized model running on an embedded edge platform for real-time inference.</li>
+      <li><strong>Generalize.</strong> An experimental study of how classification accuracy holds across different capture days and receiver positions.</li>
+    </ol>
+    <p>The project spans RF and DSP, machine learning and embedded systems, and it connects to ongoing research on drone detection in the supervisor's group.</p>
+
+    <!-- ===================================================== -->
+    <h2 id="tracks">2. Key dates</h2>
+    <table>
+      <tr><th style="width:30%">11 Oct 2026, 23:59 GMT+4</th><td>ATRC EDGE Challenge application closes.</td></tr>
+      <tr><th>12 to 25 Oct 2026</th><td>Challenge shortlisting.</td></tr>
+      <tr><th>26 Oct 2026 onwards</th><td>Challenge mentoring phase; submission in November.</td></tr>
+      <tr><th>November 2026</th><td>Challenge demo days at NSTI Festival 2026.</td></tr>
+      <tr><th>15 Nov 2026</th><td>Last day to submit purchase documents for reimbursement.</td></tr>
+    </table>
+
+    <!-- ===================================================== -->
+    <h2 id="hardware">3. Hardware</h2>
+
+    <h4>What to buy</h4>
+    <table>
+      <tr><th style="width:30%">Item</th><th>Where</th><th style="width:34%">Notes</th></tr>
+      <tr><td>ADALM-Pluto SDR (1×)</td><td><a href="https://www.amazon.ae/dp/B0H69ZVLL1" target="_blank">Amazon.ae listing</a></td><td>The receiver. 325 MHz to 3.8 GHz out of the box, 12-bit, 20 MHz bandwidth, USB powered.</td></tr>
+      <tr><td>ESP32 transmitter set (10×, identical)</td><td><a href="https://www.amazon.ae/dp/B08D5ZD528" target="_blank">ESP-WROOM-32 DevKit, Amazon.ae</a></td><td>The proposal calls for 10 identical modules from the same vendor and batch.</td></tr>
+      <tr><td>ESP32-S3 board (1×)</td><td><a href="https://www.amazon.ae/dp/B0F5QCK6X5" target="_blank">ESP32-S3-WROOM-1 DevKit, Amazon.ae</a></td><td></td></tr>
+      <tr><td>LILYGO T-SIM7000G (1×), ESP32 with a built-in mobile-network modem</td><td><a href="https://www.amazon.ae/dp/B099RQ7BSR" target="_blank">Amazon.ae listing</a></td><td>Needs a data SIM.</td></tr>
+    </table>
+
+    <h4>Purchasing rules that apply to you</h4>
+    <p>These are the department's SDP purchase and reimbursement rules as they affect this team. The maximum reimbursable amount for the group is the number of students times AED 1,000, so AED 4,000 for four students. Get the supervisor's agreement before any purchase, since reimbursement depends on it. For online stores keep the order confirmation or order summary, captured on a PC rather than on a phone. If you pay in a foreign currency, also keep the bank confirmation showing the AED amount. Ship to the university address with your name, phone and email, so that customs and courier charges are handled by the university. Submit the documents for reimbursement within 7 days of the purchase and copy the supervisor on the email. The last day to submit purchase documents is 15 November 2026. Any IT-related item (computers, storage, software, subscriptions) needs written IT Department approval first.</p>
+
+    <!-- ===================================================== -->
+    <h2 id="competition">4. The competition, and how it joins the project</h2>
+
+    <h3>What the challenge asks</h3>
+    <p>The ATRC EDGE Challenge asks how to keep a user's experience unbroken when a device moves between networks. Its statement names two cases, roaming between Wi-Fi and mobile networks and moving between different Wi-Fi access points, and says that the interruptions during these transitions degrade the experience and hurt critical applications. What the judges want is a transition with a smaller interruption than existing methods, demonstrated by measurement on a prototype or a simulation, compared against what exists today, and turned into guidelines. Section 6 has the deliverables, the scoring and the dates.</p>
+
+    <h3>Where the interruption comes from</h3>
+    <p>When a device moves from access point A to access point B, several things happen one after the other, and each takes time. The device notices that A is getting weak, which it usually does only after packets start failing. It scans the channels to find B. It authenticates and associates with B. It obtains an IP address on the new network. Finally the application, whatever it was doing, notices that its connection broke and re-establishes it. The sum of these steps is the gap the user feels, and in an ordinary Wi-Fi roam the largest parts are the late detection, the scan, and the application recovery, since a connection that was bound to the old address cannot survive the move.</p>
+    <div class="fig ">
+      <svg viewBox="0 0 760 120" role="img" aria-label="The steps of a Wi-Fi roam and the time each takes">
+        <text class="f-txt" x="10" y="16">the gap, step by step (widths are typical, not to scale)</text>
+        <g class="f-txt">
+          <rect x="10" y="30" width="180" height="34" fill="#e2b4b4" style="animation: blink 6s linear infinite 0s;"/><text x="100" y="52" text-anchor="middle">notice A is failing</text>
+          <rect x="190" y="30" width="200" height="34" fill="#e8c9a3" style="animation: blink 6s linear infinite 1s;"/><text x="290" y="52" text-anchor="middle">scan channels for B</text>
+          <rect x="390" y="30" width="80" height="34" fill="#cfe0c7" style="animation: blink 6s linear infinite 2s;"/><text x="430" y="52" text-anchor="middle">auth</text>
+          <rect x="470" y="30" width="60" height="34" fill="#cfe0c7" style="animation: blink 6s linear infinite 2.5s;"/><text x="500" y="52" text-anchor="middle">assoc</text>
+          <rect x="530" y="30" width="60" height="34" fill="#c5d5ea" style="animation: blink 6s linear infinite 3s;"/><text x="560" y="52" text-anchor="middle">IP</text>
+          <rect x="590" y="30" width="160" height="34" fill="#e2b4b4" style="animation: blink 6s linear infinite 3.5s;"/><text x="670" y="52" text-anchor="middle">app reconnects</text>
+        </g>
+        <text class="f-lbl" x="10" y="90">red: where most of the time goes. Our proposal removes the first block (the network decides early) and the last (the session is anchored above the access points), and shortens auth by recognizing the device beforehand.</text>
+      </svg>
+      <div class="cap">The interruption is a chain of steps. Making one of them faster helps little if the long ones remain, which is why the proposal attacks the detection and the application recovery rather than the credential check alone.</div>
+    </div>
+
+    <h3>Our proposal</h3>
+    <p>We move the decision from the device to the network, and we make it before the old link fails. Both access points are ESP32 boards, and both listen to the moving device all the time, in promiscuous mode, reporting to a controller on a laptop how strongly they hear it. The controller therefore sees the device drifting from A toward B while A still works, and it prepares B in advance, so that when the switch happens B already knows the device and holds its session state. The application session is anchored at the controller rather than at the access point, so a change of access point does not break it. The switch is then decided early and executed while both links are still usable.</p>
+    <p>Preparing B in advance is only safe if B can be sure that the device it has been hearing is the real one, and this is where the project's idea enters. Every access point and every device stamps its frames with a clock, and every clock drifts at its own rate because no crystal is perfect. By collecting timestamps for a while, a listener can compute the drift rate of the device it hears, and that rate identifies the board, since it comes from its hardware rather than from anything it declares. This was shown in 2008 as a way to detect fake access points [9]. In our design the controller uses the same measurement to confirm that the device seen by B is the device known at A, without a credential exchange, and to refuse a cloned device that copies the real one's address. That is the small piece of RF fingerprinting the competition uses, and the full version, with the SDR and raw IQ samples, is the main project described on this page.</p>
+    <div class="fig ">
+      <svg id="roamfig" viewBox="0 0 760 250" role="img" aria-label="A device roaming between two access points">
+        <text id="roam-title" class="f-txt" x="380" y="18" text-anchor="middle" style="font-weight:700">plain roam: the device decides late, the stream breaks</text>
+        <g id="apA"><rect x="40" y="60" width="70" height="44" rx="6" fill="#fff" stroke="#2b6cb0" stroke-width="2"/><text class="f-txt" x="75" y="87" text-anchor="middle">AP A</text></g>
+        <g id="apB"><rect x="650" y="60" width="70" height="44" rx="6" fill="#fff" stroke="#2b6cb0" stroke-width="2"/><text class="f-txt" x="685" y="87" text-anchor="middle">AP B</text></g>
+        <text id="apB-note" class="f-lbl" x="685" y="122" text-anchor="middle"></text>
+        <line x1="110" y1="140" x2="650" y2="140" stroke="#eee" stroke-width="2"/>
+        <line id="linkA" x1="75" y1="104" x2="120" y2="140" stroke="#2f855a" stroke-width="2"/>
+        <line id="linkB" x1="685" y1="104" x2="120" y2="140" stroke="#2f855a" stroke-width="2" opacity="0"/>
+        <g id="dev"><circle cx="120" cy="140" r="12" fill="#2b6cb0"/><text class="f-lbl" x="120" y="165" text-anchor="middle">moving device</text></g>
+        <text class="f-txt" x="40" y="200">stream</text>
+        <g id="pk"></g>
+        <line x1="100" y1="212" x2="740" y2="212" stroke="#bbb"/>
+        <text id="gap-txt" class="f-mono" x="740" y="240" text-anchor="end"></text>
+      </svg>
+      <div class="cap">The animation alternates between the two cases. In the plain roam, the device only reacts once access point A has become unusable, then scans, joins B and the application reconnects; the stream shows a gap. In the proposed roam, both access points hear the device all the time, the controller sees it drifting toward B, confirms it by its clock drift, prepares B early, and the switch happens while A still works; the stream continues.</div>
+    </div>
+
+    <h3>What is measured</h3>
+    <p>The prototype uses four ESP32 boards, two as access points, one as the moving device streaming a simple data feed, and the laptop as controller. The device is forced from A to B and back. For each transition the team records the length of the interruption, the packets lost, and the time until the stream is back to normal, first for a plain roam where the device does everything itself, then for the network-decided roam described above. A third run with a second board pretending to be the device shows that the early preparation is not granted to an impostor. Mobile and satellite transitions are not built; they enter the report as comparison cases with their published latency and loss, so that the guidelines cover the whole statement.</p>
+
+    <h3>Why this prepares you for the main project</h3>
+    <p>Every skill the prototype needs is a skill the fingerprinting work needs afterwards: programming the ESP32, understanding what a frame, a beacon and an access point are, listening to Wi-Fi at the packet level, turning measurements into plots in Python, and the idea that hardware imperfections identify a device. When the SDR arrives, the timestamps are replaced by raw IQ samples and the same story continues at a deeper level.</p>
+
+    <!-- ===================================================== -->
+    <h2 id="modules">5. Learning modules, step by step</h2>
+
+    <p>Do the modules in order. Each one gives you something to read, a task, and an exercise that shows you have understood. Do not skip the reading; the task is designed to be easy after the reading and confusing without it.</p>
+
+    <div class="module">
+      <h3><span class="label">Module 0</span> Tools on your laptop</h3>
+      <p><strong>Goal.</strong> A working Python environment and a code editor.</p>
+      <p><strong>Steps.</strong></p>
+      <ol>
+        <li>Install <a href="https://www.python.org/downloads/" target="_blank">Python 3.11 or newer</a>. On Windows tick "Add Python to PATH".</li>
+        <li>Install <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> and its Python and Jupyter extensions.</li>
+        <li>Open a terminal and run <code>pip install numpy scipy matplotlib jupyter</code>.</li>
+      </ol>
+      <p><strong>Exercise.</strong> A screenshot of <code>python --version</code> in your terminal.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Module 1</span> Python for signals</h3>
+      <p><strong>Read.</strong> <a href="https://pysdr.org/content/intro.html" target="_blank">PySDR, chapter 1 (Introduction)</a> and <a href="https://pysdr.org/content/frequency_domain.html" target="_blank">chapter 2 (Frequency Domain)</a>. PySDR is a free textbook written for exactly your situation, so read it slowly and run every code snippet.</p>
+      <p><strong>Task.</strong> Following the code in chapter 2 of PySDR, generate a sine wave, add noise, and plot its FFT. Then change the frequency and the noise level and describe in two sentences what moved in the FFT plot and why.</p>
+      <p><strong>Exercise.</strong> The modified notebook with its plots visible.</p>
+      <p><strong>Vocabulary you must own after this module.</strong> Sample rate, Nyquist frequency, FFT, bin, dB, SNR.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Module 2</span> What IQ samples are</h3>
+      <p><strong>Read.</strong> <a href="https://pysdr.org/content/sampling.html" target="_blank">PySDR, chapter 3 (IQ Sampling)</a>. The key idea is that a radio delivers complex numbers, where the real part is I and the imaginary part is Q, and that a complex sample carries both amplitude and phase. Everything in this project is a sequence of complex numbers.</p>
+      <p><strong>Task.</strong> Using the example IQ signals generated in chapter 3 of PySDR, plot (a) the real and imaginary parts against time, (b) the magnitude spectrum with <code>numpy.fft.fftshift</code> applied, and (c) a spectrogram with <code>matplotlib.pyplot.specgram</code>.</p>
+      <p><strong>Exercise.</strong> The notebook with the three plots.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Module 3</span> The Pluto SDR</h3>
+      <p><strong>Read.</strong> The <a href="https://wiki.analog.com/university/tools/pluto" target="_blank">ADALM-Pluto wiki</a> (start with "PlutoSDR Users and students", follow the quick start and the driver installation for your operating system), then <a href="https://pysdr.org/content/pluto.html" target="_blank">PySDR, chapter 5 (PlutoSDR in Python)</a>, which walks through installing <code>libiio</code> and <a href="https://github.com/analogdevicesinc/pyadi-iio" target="_blank">pyadi-iio</a> and receiving your first samples.</p>
+      <p><strong>Task.</strong></p>
+      <ol>
+        <li>Plug in the Pluto and confirm the computer sees it, as described in the wiki quick start.</li>
+        <li>Follow PySDR chapter 5 to receive samples in Python and save them to a file.</li>
+        <li>Open the saved file with your module 2 notebook and look at the spectrum and spectrogram.</li>
+      </ol>
+      <p><strong>Exercise.</strong> A screenshot of the spectrogram of your first capture.</p>
+      <div class="warn">The Pluto also transmits. Never run a transmit script without the supervisor present, and never with the TX port connected to an antenna at a frequency you have not been told to use.</div>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Module 4</span> The ESP32 as a transmitter</h3>
+      <p><strong>Read.</strong> The <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/" target="_blank">Arduino core for ESP32 documentation</a>, the installation guide and the Wi-Fi section. Install the Arduino IDE and add the ESP32 board package following that guide.</p>
+      <p><strong>Task.</strong></p>
+      <ol>
+        <li>Following the documentation, write and flash a sketch that makes the ESP32 create a Wi-Fi access point.</li>
+        <li>Confirm on your phone that the network appears.</li>
+        <li>With the Pluto tuned to the channel the ESP32 uses, capture while the board is on and again while it is off, and compare the two spectrograms.</li>
+      </ol>
+      <p><strong>Exercise.</strong> The two spectrograms, with the ESP32 transmissions marked.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Module 5</span> The first fingerprint feature</h3>
+      <p><strong>Read.</strong> Section II of the review by Soltanieh et al. [2], which explains the difference between transient-based and steady-state features, and the carrier frequency offset discussion in Shen et al. [7], which shows why CFO is both a strong feature and a fragile one.</p>
+      <p><strong>Task.</strong> Explain, in your own words and with one figure, what carrier frequency offset is and why it differs between two boards.</p>
+      <p><strong>Exercise.</strong> That explanation, one page.</p>
+    </div>
+
+    <h3>Optional modules, when you have time</h3>
+    <ul>
+      <li><strong>Digital modulation.</strong> <a href="https://pysdr.org/content/digital_modulation.html" target="_blank">PySDR, chapter 4 (Digital Modulation)</a>, to understand what a QPSK or OFDM burst looks like in IQ.</li>
+      <li><strong>GNU Radio.</strong> The <a href="https://wiki.gnuradio.org/index.php/Tutorials" target="_blank">GNU Radio tutorials</a>, to build capture flowgraphs without writing code. Useful for live viewing of the spectrum.</li>
+      <li><strong>Machine learning basics.</strong> The <a href="https://pytorch.org/tutorials/beginner/basics/intro.html" target="_blank">PyTorch "Learn the Basics" tutorial</a>. Reading it makes the papers in section 8 understandable.</li>
+    </ul>
+
+    <!-- ===================================================== -->
+    <h2 id="challenge">6. ATRC EDGE Challenge</h2>
+
+    <h4>The challenge</h4>
+    <p>The <a href="https://challengeon.atrc.ae/en/challenges/atp2026/pages/edge-challenge-statement?lang=en" target="_blank">EDGE Challenge</a> is part of the ATRC Advanced Technology Pioneers 2026. The question is "How might we keep a user's experience unbroken as they move between Wi-Fi, mobile, satellite and wired networks?". Teams of 3 to 4 university students across the UAE are eligible. The judges expect a basic prototype, simulation or model, and they state that presenting only a concept is not enough.</p>
+
+    <table>
+      <tr><th style="width:30%">Success criteria</th><td>Investigate existing seamless-connectivity mechanisms with key references; propose an improved or adapted mechanism; create a simulation, emulation or early prototype; compare existing and proposed solutions; develop guidelines for improving quality of service and experience.</td></tr>
+      <tr><th>Deliverables</th><td>A 10-page PDF presentation covering problem, solution, system design, demo and real-life application plan, and a 1 to 2 minute video of the prototype or simulation.</td></tr>
+      <tr><th>Scoring</th><td>Critical thinking and originality 25%, implementation quality 20%, experimental soundness 20%, results and comparison 20%, documentation clarity 15%.</td></tr>
+      <tr><th>Timeline</th><td>Application 20 Aug to <strong>11 Oct 2026, 23:59 GMT+4</strong>. Shortlisting 12 to 25 Oct 2026. Mentoring from 26 Oct 2026, with submission in November. Demo days in November 2026 at the NSTI Festival 2026 (4 days). Full page: <a href="https://challengeon.atrc.ae/en/challenges/atp2026/pages/timeline?lang=en" target="_blank">timeline</a>.</td></tr>
+    </table>
+
+    <!-- ===================================================== -->
+    <h2 id="reading">7. Reading list</h2>
+
+    <p>Read in this order. Numbers match the citations used above.</p>
+    <ol>
+      <li>V. Brik, S. Banerjee, M. Gruteser, and S. Oh, "Wireless device identification with radiometric signatures," in <em>Proceedings of the 14th ACM International Conference on Mobile Computing and Networking (MobiCom)</em>, 2008. <a href="https://doi.org/10.1145/1409944.1409959" target="_blank">doi:10.1145/1409944.1409959</a>. The paper that showed commercial Wi-Fi cards can be told apart by their modulation errors.</li>
+      <li>N. Soltanieh, Y. Norouzi, Y. Yang, and N. C. Karmakar, "A review of radio frequency fingerprinting techniques," <em>IEEE Journal of Radio Frequency Identification</em>, vol. 4, no. 3, 2020. <a href="https://doi.org/10.1109/JRFID.2020.2968369" target="_blank">doi:10.1109/JRFID.2020.2968369</a>. Read this one first; it explains transient and steady-state features with figures.</li>
+      <li>A. Jagannath, J. Jagannath, and P. S. P. Vasanth Kumar, "A comprehensive survey on radio frequency (RF) fingerprinting: Traditional approaches, deep learning, and open challenges," <em>Computer Networks</em>, vol. 219, 2022. <a href="https://doi.org/10.1016/j.comnet.2022.109455" target="_blank">doi:10.1016/j.comnet.2022.109455</a>. The map of the whole field, including the open problems this project touches.</li>
+      <li>S. Riyaz, K. Sankhe, S. Ioannidis, and K. Chowdhury, "Deep learning convolutional neural networks for radio identification," <em>IEEE Communications Magazine</em>, vol. 56, no. 9, 2018. <a href="https://doi.org/10.1109/MCOM.2018.1800153" target="_blank">doi:10.1109/MCOM.2018.1800153</a>. A short, readable introduction to CNNs on raw IQ.</li>
+      <li>K. Sankhe, M. Belgiovine, F. Zhou, S. Riyaz, S. Ioannidis, and K. R. Chowdhury, "ORACLE: Optimized Radio clAssification through Convolutional neuraL nEtworks," in <em>IEEE INFOCOM 2019</em>. <a href="https://doi.org/10.1109/INFOCOM.2019.8737463" target="_blank">doi:10.1109/INFOCOM.2019.8737463</a>. Identifies 16 identical USRP radios from raw IQ; the closest published design to work package 2 of the proposal. Its dataset is public at <a href="https://www.genesys-lab.org/oracle" target="_blank">genesys-lab.org/oracle</a> and can be used for practice before our own dataset exists.</li>
+      <li>A. Al-Shawabka, F. Restuccia, S. D'Oro, T. Jian, B. Costa Rendon, N. Soltani, J. Dy, S. Ioannidis, K. Chowdhury, and T. Melodia, "Exposing the fingerprint: Dissecting the impact of the wireless channel on radio fingerprinting," in <em>IEEE INFOCOM 2020</em>. <a href="https://doi.org/10.1109/INFOCOM41043.2020.9155259" target="_blank">doi:10.1109/INFOCOM41043.2020.9155259</a>. Why accuracy collapses across days; the motivation for work package 4.</li>
+      <li>G. Shen, J. Zhang, A. Marshall, L. Peng, and X. Wang, "Radio frequency fingerprint identification for LoRa using deep learning," <em>IEEE Journal on Selected Areas in Communications</em>, vol. 39, no. 8, pp. 2604–2616, 2021. <a href="https://doi.org/10.1109/JSAC.2021.3087250" target="_blank">doi:10.1109/JSAC.2021.3087250</a>. Compares IQ, FFT and spectrogram inputs and handles CFO drift; the methodology template for our classifier study.</li>
+      <li>S. Hanna, S. Karunaratne, and D. Cabric, "WiSig: A large-scale WiFi signal dataset for receiver and channel agnostic RF fingerprinting," <em>IEEE Access</em>, vol. 10, pp. 22808–22818, 2022. <a href="https://doi.org/10.1109/ACCESS.2022.3154790" target="_blank">doi:10.1109/ACCESS.2022.3154790</a>. A public Wi-Fi fingerprinting dataset with multiple receivers and days; the benchmark to compare our generalization results against. Dataset and example code at <a href="https://cores.ee.ucla.edu/wisig/" target="_blank">cores.ee.ucla.edu/wisig</a>.</li>
+      <li>S. Jana and S. K. Kasera, "On fast and accurate detection of unauthorized wireless access points using clock skews," in <em>Proceedings of the 14th ACM International Conference on Mobile Computing and Networking (MobiCom)</em>, 2008. <a href="https://doi.org/10.1145/1409944.1409958" target="_blank">doi:10.1145/1409944.1409958</a>. Identifies access points from the drift of their beacon timestamps; the basis for the recognition step in the competition prototype.</li>
+    </ol>
+
+    <h4>Other material</h4>
+    <ul>
+      <li><a href="https://pysdr.org/" target="_blank">PySDR</a>, M. Lichtman. The textbook for modules 1 to 3 and the optional modulation module.</li>
+      <li><a href="https://wiki.analog.com/university/tools/pluto" target="_blank">ADALM-Pluto wiki</a>, Analog Devices. Drivers, quick start, hardware details, and the procedure to extend the tuning range to 70 MHz to 6 GHz.</li>
+      <li><a href="https://github.com/analogdevicesinc/pyadi-iio" target="_blank">pyadi-iio</a>, the Python interface used by all capture scripts.</li>
+      <li><a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/" target="_blank">Arduino core for ESP32</a>, Espressif.</li>
+    </ul>
+
+    <!-- ===================================================== -->
+    <h2 id="glossary">8. Glossary</h2>
+    <table>
+      <tr><th style="width:26%">Term</th><th>Meaning in this project</th></tr>
+      <tr><td>SDR</td><td>Software-defined radio. A radio whose tuning, filtering and demodulation happen in software on samples delivered over USB. Ours is the ADALM-Pluto.</td></tr>
+      <tr><td>IQ sample</td><td>One complex number from the radio. I is the real part, Q the imaginary part. Amplitude is the magnitude, phase is the angle.</td></tr>
+      <tr><td>Sample rate (sr)</td><td>How many IQ samples per second. 20 Msps means 20 million per second, enough for one 20 MHz Wi-Fi channel.</td></tr>
+      <tr><td>Center frequency (fc)</td><td>The frequency the radio is tuned to. Wi-Fi channel 1 is centred at 2412 MHz.</td></tr>
+      <tr><td>Gain</td><td>Amplification in the receiver front end, in dB. Too low and the signal is buried in noise; too high and the ADC clips.</td></tr>
+      <tr><td>Burst</td><td>One transmitted packet as seen in the capture. Our beacons produce one burst every 100 ms.</td></tr>
+      <tr><td>Preamble</td><td>The fixed, known start of a Wi-Fi packet. Because it is identical for every board, differences in how it arrives come from the hardware, which is what we measure.</td></tr>
+      <tr><td>CFO</td><td>Carrier frequency offset. The transmitter's crystal is never exactly on frequency; the small error is one fingerprint feature.</td></tr>
+      <tr><td>I/Q imbalance</td><td>The I and Q paths in the transmitter have slightly different gain and are not exactly 90 degrees apart. Another fingerprint feature.</td></tr>
+      <tr><td>Transient</td><td>The first microseconds when the power amplifier turns on. Its shape depends on the device.</td></tr>
+      <tr><td>Fingerprint</td><td>The combination of features, or the raw IQ pattern, that identifies one board.</td></tr>
+      <tr><td>Generalization</td><td>Whether a classifier trained on one day and position still works on another day or position.</td></tr>
+      <tr><td>Quantization</td><td>Shrinking a trained network to 8-bit numbers so that it fits and runs on an embedded board. Work package 3 of the proposal.</td></tr>
+      <tr><td>Edge inference</td><td>Running the classifier on the small board next to the radio instead of on a server. Work package 3 of the proposal.</td></tr>
+    </table>
+
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+    <ul class="pager">
+      <li class="previous"><a href="/"><span aria-hidden="true">&larr;</span> Back to home</a></li>
+    </ul>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </div>
+</footer>
+
+<script src="/js/jquery-1.12.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/hugo-academic.js"></script>
+
+
+<script>
+(function(){
+  // reading progress
+  var bar=document.getElementById('readbar');
+  function prog(){var h=document.documentElement;var p=(h.scrollTop||document.body.scrollTop)/((h.scrollHeight-h.clientHeight)||1);bar.style.width=(p*100)+'%';}
+  window.addEventListener('scroll',prog);prog();
+  // reveal on scroll
+  var els=document.querySelectorAll('.sdp h2, .sdp h3, .sdp p, .sdp table, .sdp ol, .sdp ul, .sdp .fig, .sdp .box, .sdp .warn');
+  els.forEach(function(e){e.classList.add('reveal');});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  } else { els.forEach(function(e){e.classList.add('on');}); }
+  // collapsible modules
+  document.querySelectorAll('.sdp .module h3').forEach(function(h){h.addEventListener('click',function(){h.parentNode.classList.toggle('closed');});});
+  // mini toc
+  var toc=document.getElementById('minitoc'); var hs=document.querySelectorAll('.sdp h2[id]');
+  if(toc){hs.forEach(function(h){var a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+    function cur(){var y=window.scrollY+120,c=null;hs.forEach(function(h){if(h.offsetTop<=y)c=h.id;});toc.querySelectorAll('a').forEach(function(a){a.classList.toggle('cur',a.getAttribute('href')==='#'+c);});}
+    window.addEventListener('scroll',cur);cur();}
+  // I/Q clock
+  var hand=document.getElementById('iq-hand');
+  if(hand){var li=document.getElementById('iq-i'),lq=document.getElementById('iq-q'),tip=document.getElementById('iq-tip'),ti=document.getElementById('iq-ti'),tq=document.getElementById('iq-tq'),tx=document.getElementById('iq-txt');
+    var cx=130,cy=120,R=90,ang=0,hist=[],N=110;
+    function step(){ang+=0.035;var I=Math.cos(ang),Q=Math.sin(ang),x=cx+R*I,y=cy-R*Q;
+      hand.setAttribute('x2',x);hand.setAttribute('y2',y);tip.setAttribute('cx',x);tip.setAttribute('cy',y);
+      li.setAttribute('x2',x);lq.setAttribute('x1',x);lq.setAttribute('x2',x);lq.setAttribute('y2',y);
+      hist.push([I,Q]);if(hist.length>N)hist.shift();
+      var pi='',pq='';for(var k=0;k<hist.length;k++){var X=300+k*4;pi+=X+','+(80-hist[k][0]*30)+' ';pq+=X+','+(180-hist[k][1]*30)+' ';}
+      ti.setAttribute('points',pi);tq.setAttribute('points',pq);tx.textContent='I = '+I.toFixed(2)+'   Q = '+Q.toFixed(2);
+      requestAnimationFrame(step);} step();}
+  // roam animation
+  var dev=document.getElementById('dev');
+  if(dev){var linkA=document.getElementById('linkA'),linkB=document.getElementById('linkB'),pk=document.getElementById('pk'),title=document.getElementById('roam-title'),note=document.getElementById('apB-note'),gap=document.getElementById('gap-txt'),apB=document.getElementById('apB').firstElementChild;
+    var t0=null,mode=0,T=9000;
+    function ns(t,v){var e=document.createElementNS('http://www.w3.org/2000/svg',t);for(var k in v)e.setAttribute(k,v[k]);return e;}
+    function frame(ts){if(!t0)t0=ts;var t=(ts-t0)%T;var ph=t/T; if(t<20){mode=Math.floor((ts-t0)/T)%2;pk.innerHTML='';
+        title.textContent=mode?'proposed roam: the network decides early, the stream continues':'plain roam: the device decides late, the stream breaks';
+        note.textContent='';apB.setAttribute('fill','#fff');gap.textContent='';}
+      var x=120+530*Math.min(1,ph/0.85);dev.setAttribute('transform','translate('+(x-120)+',0)');
+      linkA.setAttribute('x2',x);linkB.setAttribute('x2',x);
+      var swAt=mode?0.45:0.62, dead=mode?0:0.20;
+      var onA=ph<swAt, onB=ph>=swAt+dead;
+      linkA.setAttribute('opacity',onA?(ph>0.4?0.4:1):0);linkB.setAttribute('opacity',onB?1:0);
+      if(mode&&ph>0.25){note.textContent=ph<0.45?'hears the device, checks its clock drift, prepares':'ready';apB.setAttribute('fill',ph<0.45?'#fff8e6':'#eaf5ea');}
+      if(!mode&&ph>=swAt&&ph<swAt+dead){note.textContent=ph<swAt+0.1?'scan, auth, assoc, IP':'app reconnecting';}
+      var i=Math.floor(ph*64);if(pk.childElementCount<=i&&i<64){var ok=(onA||onB);pk.appendChild(ns('rect',{x:100+i*10,y:ok?196:200,width:7,height:ok?16:8,fill:ok?'#2f855a':'#c53030'}));}
+      if(!mode&&ph>swAt+dead)gap.textContent='gap: '+Math.round(dead*T)+' ms, '+Math.round(dead*64)+' packets lost'; if(mode&&ph>swAt)gap.textContent='gap: 0 ms, 0 packets lost';
+      requestAnimationFrame(frame);} requestAnimationFrame(frame);}
+})();
+</script>
+</body>
+</html>
