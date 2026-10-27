@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme" content="hugo-academic">
+  <meta name="description" content="SDP1 team page, part 2: the three weeks before the presentation">
+
+  <link rel="stylesheet" href="/css/highlight.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <title>SDP1, part 2</title>
+
+  <style>
+    .sdp h2 { margin-top: 48px; text-transform: none; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+    .sdp h3 { margin-top: 32px; text-transform: none; }
+    .sdp h4 { margin-top: 22px; font-weight: 700; }
+    .sdp p, .sdp li { font-size: 16px; line-height: 1.8; }
+    .sdp table { width: 100%; border-collapse: collapse; margin: 18px 0 28px; font-size: 15px; }
+    .sdp th, .sdp td { border: 1px solid #ddd; padding: 8px 10px; vertical-align: top; text-align: left; }
+    .sdp th { background: #f5f5f5; }
+    .sdp .box { background: #f7f9fb; border-left: 4px solid #2b6cb0; padding: 14px 18px; margin: 20px 0; }
+    .sdp .warn { background: #fff8e6; border-left: 4px solid #d69e2e; padding: 14px 18px; margin: 20px 0; }
+    .sdp .ok { background: #f0f8f1; border-left: 4px solid #2f855a; padding: 14px 18px; margin: 20px 0; }
+    .sdp .module { border: 1px solid #e3e3e3; border-radius: 8px; padding: 18px 22px; margin: 26px 0; }
+    .sdp .module h3 { margin-top: 0; }
+    .sdp .label { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: #2b6cb0; border-radius: 3px; padding: 2px 8px; margin-right: 6px; }
+    .sdp .label.b { background: #2f855a; }
+    .sdp .label.c { background: #d69e2e; }
+    .sdp .who { float: right; font-size: 13px; color: #666; font-weight: 400; }
+    .sdp code, .sdp pre { font-family: "Roboto Mono", monospace; font-size: 13.5px; }
+    .sdp pre { background: #f4f4f4; padding: 12px 14px; border-radius: 6px; overflow-x: auto; line-height: 1.5; }
+    .sdp .toc { columns: 2; column-gap: 40px; }
+    .sdp .toc li { break-inside: avoid; }
+    @media (max-width: 767px) { .sdp .toc { columns: 1; } }
+
+    #readbar { position: fixed; top: 0; left: 0; height: 4px; width: 0; background: #2b6cb0; z-index: 2000; transition: width .1s linear; }
+    .sdp .fig { margin: 26px 0 34px; background: #fbfcfd; border: 1px solid #e6eaf0; border-radius: 10px; padding: 14px 16px 10px; }
+    .sdp .fig svg { width: 100%; height: auto; display: block; }
+    .sdp .fig .cap { font-size: 14px; color: #555; margin: 10px 4px 0; line-height: 1.6; }
+    .sdp .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .sdp .reveal.on { opacity: 1; transform: none; }
+    .sdp .module h3 { cursor: pointer; user-select: none; }
+    .sdp .module h3::after { content: "\2212"; float: right; color: #999; font-weight: 400; }
+    .sdp .module.closed h3::after { content: "+"; }
+    .sdp .module.closed > *:not(h3) { display: none; }
+    #minitoc { position: fixed; right: 18px; top: 110px; width: 190px; font-size: 12.5px; line-height: 1.5; border-left: 2px solid #e6eaf0; padding-left: 12px; display: none; z-index: 10; }
+    #minitoc a { color: #777; text-decoration: none; display: block; padding: 2px 0; }
+    #minitoc a.cur { color: #2b6cb0; font-weight: 700; }
+    @media (min-width: 1360px) { #minitoc { display: block; } }
+    .f-txt { font-family: "Lato", sans-serif; font-size: 12px; fill: #444; }
+    .f-lbl { font-family: "Lato", sans-serif; font-size: 11px; fill: #777; }
+    .f-mono { font-family: "Roboto Mono", monospace; font-size: 11px; fill: #2b6cb0; }
+    @keyframes blink { 0%,100% { opacity: .15; } 50% { opacity: 1; } }
+    @keyframes ripple { 0% { r: 6; opacity: .9; } 100% { r: 120; opacity: 0; } }
+  </style>
+
+</head>
+<body id="top">
+<div id="readbar"></div>
+<nav id="minitoc" aria-label="Sections"></nav>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"><a href="/#about"><span>Home</span></a></li>
+        <li class="nav-item"><a href="/#news"><span>News</span></a></li>
+        <li class="nav-item"><a href="/#publications"><span>Publications</span></a></li>
+        <li class="nav-item"><a href="/#competitions"><span>Honors and Awards</span></a></li>
+        <li class="nav-item"><a href="/current-projects.html"><span>Current Projects</span></a></li>
+        <li class="nav-item"><a href="/#tutorials"><span>Tutorials</span></a></li>
+        <li class="nav-item"><a href="/#contact"><span>Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<article class="article sdp" itemscope itemtype="http://schema.org/Article">
+  <div class="article-container">
+
+    <h1 itemprop="name">SDP1 Team Page, Part 2: the three weeks before the presentation</h1>
+
+    <div class="box">
+      The ADALM-Pluto and the ten ESP32 boards have arrived. SDP1 ends with a literature review and a presentation, and SDP2 is where the full system gets built. This page covers only the time between now and the presentation. It is organised in three weeks, and every task says what to read, what to run, what the result must look like, and which file to put in the shared folder. The presentation at the end is assembled from those files and from nothing else. <a href="/sdp1.html">Part 1</a> stays the reference for the background, the figures and the glossary; this page links back to it where needed.
+    </div>
+
+    <h2>Contents</h2>
+    <ol class="toc">
+      <li><a href="#dates">1. Dates and the rule of the shared folder</a></li>
+      <li><a href="#where">2. Where everything is</a></li>
+      <li><a href="#week1">3. Week 1, catching up (28 Oct to 3 Nov)</a></li>
+      <li><a href="#week2">4. Week 2, the first classification (4 to 10 Nov)</a></li>
+      <li><a href="#week3">5. Week 3, the presentation (11 to 16 Nov)</a></li>
+      <li><a href="#targets">6. Acceptance targets for SDP2</a></li>
+      <li><a href="#checklist">7. Checklist</a></li>
+      <li><a href="#refs">8. References</a></li>
+    </ol>
+
+    <!-- ===================================================== -->
+    <h2 id="dates">1. Dates and the rule of the shared folder</h2>
+
+    <table>
+      <tr><th style="width:30%">28 Oct to 3 Nov 2026</th><td>Week 1. Python, IQ, the Pluto receiving, the two core papers read, the industrial applications reading started.</td></tr>
+      <tr><th>4 to 10 Nov 2026</th><td>Week 2. Ten boards flashed, ten minutes of recording per board on two days, bursts found, the easy classifier working, carrier frequency offset measured as far as time allows.</td></tr>
+      <tr><th>11 to 16 Nov 2026</th><td>Week 3. Slides built from the folder, rehearsal with the supervisor on Thursday 12 Nov, presentation in the week of 16 Nov on the date set by the SDP coordinator.</td></tr>
+      <tr><th>15 Nov 2026</th><td>Last day to submit purchase documents for reimbursement (see Part 1, section 3).</td></tr>
+    </table>
+
+    <p>The team creates a shared OneDrive folder named <code>SDP1_RF_Fingerprinting</code>, shares it among the four students and with the supervisor, and creates the five subfolders listed in the next section. Every deliverable on this page has a file name, and a task counts as done when that file is in the folder, in the right subfolder, under that name. Work that exists only on someone's laptop does not count. The supervisor checks the folder on Monday 3 Nov, Monday 10 Nov and Thursday 12 Nov.</p>
+
+    <!-- ===================================================== -->
+    <h2 id="where">2. Where everything is</h2>
+
+    <h4>The shared folder</h4>
+    <table>
+      <tr><th style="width:30%">Subfolder</th><th>What goes there</th></tr>
+      <tr><td><code>00_reading/</code></td><td>The PDFs of the papers and the half-page summaries, named <code>summary_&lt;paper&gt;_&lt;firstname&gt;.pdf</code>.</td></tr>
+      <tr><td><code>01_notebooks/</code></td><td>Jupyter notebooks, one per task and per person, named <code>task11_&lt;firstname&gt;.ipynb</code>, <code>task12_&lt;firstname&gt;.ipynb</code>, and so on, saved with the plots visible.</td></tr>
+      <tr><td><code>02_captures/</code></td><td>The IQ recordings and their JSON description files, one per board and per day, named <code>boardXX_posA_dayYYYYMMDD.npy</code> as the capture script does by itself, plus the capture log <code>capture_log.xlsx</code> and the per-burst feature table <code>features_per_burst.csv</code>.</td></tr>
+      <tr><td><code>03_firmware/</code></td><td>The Arduino sketch flashed on the ten boards, <code>beacon_tx.ino</code>, and a photo of the ten labelled boards.</td></tr>
+      <tr><td><code>04_slides/</code></td><td>The presentation, <code>SDP1_RF_Fingerprinting_presentation.pptx</code>, and the figures it uses, exported as PNG.</td></tr>
+    </table>
+
+    <h4>Links you will use again and again</h4>
+    <table>
+      <tr><th style="width:30%">PySDR</th><td><a href="https://pysdr.org/" target="_blank">pysdr.org</a>. The textbook. Chapters <a href="https://pysdr.org/content/intro.html" target="_blank">1</a>, <a href="https://pysdr.org/content/frequency_domain.html" target="_blank">2</a>, <a href="https://pysdr.org/content/sampling.html" target="_blank">3</a> and <a href="https://pysdr.org/content/pluto.html" target="_blank">5</a> are the ones this page uses.</td></tr>
+      <tr><th>Pluto wiki</th><td><a href="https://wiki.analog.com/university/tools/pluto/users/quick_start" target="_blank">Quick start</a>, drivers for <a href="https://wiki.analog.com/university/tools/pluto/drivers/windows" target="_blank">Windows</a>, <a href="https://wiki.analog.com/university/tools/pluto/drivers/osx" target="_blank">macOS</a> and <a href="https://wiki.analog.com/university/tools/pluto/drivers/linux" target="_blank">Linux</a>.</td></tr>
+      <tr><th>pyadi-iio</th><td><a href="https://github.com/analogdevicesinc/pyadi-iio" target="_blank">GitHub repository</a> and the <a href="https://analogdevicesinc.github.io/pyadi-iio/devices/adi.ad936x.html" target="_blank">Pluto class documentation</a>, which lists every property used in the capture script below.</td></tr>
+      <tr><th>libiio</th><td><a href="https://github.com/analogdevicesinc/libiio/releases" target="_blank">Releases page</a>, where the Windows and macOS installers are.</td></tr>
+      <tr><th>Arduino core for ESP32</th><td><a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html" target="_blank">Installation</a>, <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html" target="_blank">Wi-Fi API</a>, and the <a href="https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi/examples/WiFiAccessPoint" target="_blank">WiFiAccessPoint example</a> the firmware starts from.</td></tr>
+      <tr><th>USB serial drivers</th><td><a href="https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers" target="_blank">CP210x</a> (Silicon Labs) or <a href="https://www.wch-ic.com/downloads/CH341SER_ZIP.html" target="_blank">CH340</a> (WCH). Look at the small chip next to the USB connector on the ESP32 board; it is printed with either CP2102 or CH340.</td></tr>
+      <tr><th>Part 1 of this page</th><td><a href="/sdp1.html">sdp1.html</a>, for the figures on I and Q, the packet structure, and the glossary.</td></tr>
+    </table>
+
+    <!-- ===================================================== -->
+    <h2 id="week1">3. Week 1, catching up (28 Oct to 3 Nov)</h2>
+
+    <p>Tasks 1.1, 1.2 and 1.4 are done by all four students, each on her own laptop, each handing in her own file. Task 1.5 is for the student from industrial engineering and runs alongside her other tasks until 10 Nov. Task 1.3 is done by two students together, since there is one Pluto. Who does what in week 2 and who makes which slide in week 3 is decided by the team; the checklist in section 7 has a column for that decision.</p>
+
+    <div class="module">
+      <h3><span class="label">Task 1.1</span> Python and the FFT <span class="who">everyone, due 30 Oct</span></h3>
+      <p><strong>Read.</strong> PySDR <a href="https://pysdr.org/content/intro.html" target="_blank">chapter 1</a> and <a href="https://pysdr.org/content/frequency_domain.html" target="_blank">chapter 2</a>. In chapter 2 look for the explanation of why a real sine wave shows two peaks in its FFT and for the paragraph on <code>fftshift</code>. You will need both to understand your plot.</p>
+      <p><strong>Install.</strong> Python 3.11 or newer from <a href="https://www.python.org/downloads/" target="_blank">python.org</a> (on Windows tick "Add Python to PATH"), <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> with its Python and Jupyter extensions, then in a terminal <code>pip install numpy scipy matplotlib jupyter</code>.</p>
+      <p><strong>Run.</strong> Create a notebook and run this cell as it is.</p>
+<pre>import numpy as np
+import matplotlib.pyplot as plt
+
+fs = 1e6                 # sample rate, 1 million samples per second
+N  = 4096                # number of samples
+t  = np.arange(N) / fs   # time of each sample, in seconds
+f  = 50e3                # frequency of the tone, 50 kHz
+
+x = np.sin(2*np.pi*f*t)                  # a clean sine wave
+x = x + 0.5*np.random.randn(N)           # add noise
+
+X     = np.fft.fftshift(np.fft.fft(x))                 # FFT, with zero frequency moved to the centre
+freqs = np.fft.fftshift(np.fft.fftfreq(N, 1/fs))       # the frequency of each FFT bin
+
+plt.figure(figsize=(9,3))
+plt.plot(freqs/1e3, 20*np.log10(np.abs(X)))
+plt.xlabel("frequency (kHz)"); plt.ylabel("magnitude (dB)"); plt.grid(True)
+plt.show()</pre>
+      <p><strong>What you should see.</strong> Two sharp peaks, one at +50 kHz and one at -50 kHz, standing about 40 dB above a flat, ragged floor. The floor is the noise. The two peaks exist because a real sine wave contains both a positive and a negative frequency, which chapter 2 explains.</p>
+      <p><strong>Then change things.</strong> Set <code>f = 120e3</code> and run again; the peaks move. Set the noise factor from <code>0.5</code> to <code>5</code> and run again; the floor rises and the peaks shrink relative to it. Write two sentences in a markdown cell saying what moved and why.</p>
+      <p><strong>Hand in.</strong> <code>01_notebooks/task11_&lt;firstname&gt;.ipynb</code>, saved with the plots visible.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Task 1.2</span> IQ samples <span class="who">everyone, due 31 Oct</span></h3>
+      <p><strong>Read.</strong> PySDR <a href="https://pysdr.org/content/sampling.html" target="_blank">chapter 3</a>. Look for the section that explains why a complex sample carries both amplitude and phase, and the figure that shows a complex tone having one peak where a real tone had two. Then re-read the I and Q section of <a href="/sdp1.html#basics">Part 1</a>, with its clock-hand figure.</p>
+      <p><strong>Run.</strong> In a new notebook, reuse <code>fs</code>, <code>N</code>, <code>t</code> and <code>f</code> from task 1.1 and run this.</p>
+<pre>x = np.exp(2j*np.pi*f*t)                                        # a complex tone: I = cos, Q = sin
+x = x + 0.1*(np.random.randn(N) + 1j*np.random.randn(N))        # complex noise
+
+fig, ax = plt.subplots(3, 1, figsize=(9,8))
+ax[0].plot(t[:200]*1e6, x.real[:200], label="I (real part)")
+ax[0].plot(t[:200]*1e6, x.imag[:200], label="Q (imaginary part)")
+ax[0].set_xlabel("time (µs)"); ax[0].legend()
+
+X = np.fft.fftshift(np.fft.fft(x))
+ax[1].plot(freqs/1e3, 20*np.log10(np.abs(X)))
+ax[1].set_xlabel("frequency (kHz)"); ax[1].set_ylabel("dB")
+
+ax[2].specgram(x, NFFT=256, Fs=fs, noverlap=128)
+ax[2].set_xlabel("time (s)"); ax[2].set_ylabel("frequency (Hz)")
+plt.tight_layout(); plt.show()</pre>
+      <p><strong>What you should see.</strong> On top, two sine waves a quarter of a cycle apart. In the middle, one peak only, at +50 kHz, because a complex tone has a sign to its frequency. At the bottom, a spectrogram with one horizontal line at 50 kHz across the whole duration. Change <code>f</code> to <code>-50e3</code> and the peak and the line move below zero. A real signal cannot do that; this is the whole reason radios deliver IQ.</p>
+      <p><strong>Hand in.</strong> <code>01_notebooks/task12_&lt;firstname&gt;.ipynb</code>.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Task 1.3</span> The Pluto receives <span class="who">two students, due 2 Nov</span></h3>
+      <p><strong>Read.</strong> The Pluto <a href="https://wiki.analog.com/university/tools/pluto/users/quick_start" target="_blank">quick start</a>, then PySDR <a href="https://pysdr.org/content/pluto.html" target="_blank">chapter 5</a>, which installs the software in the right order and receives the first samples. The Pluto covers 325 MHz to 3.8 GHz out of the box, so 2.4 GHz needs no modification; ignore the pages about extending the tuning range.</p>
+      <p><strong>Step 1, plug it in.</strong> Connect the Pluto to the laptop with the supplied USB cable, into the middle USB connector on the Pluto, and screw one of the two small antennas onto the connector marked RX. Three things happen within a minute. A USB drive called PlutoSDR appears; open <code>info.html</code> on it to see the serial number and firmware version. A new network adapter appears, through which the Pluto is reachable at the address <code>192.168.2.1</code>. On Windows a serial port also appears. If none of this happens on Windows, install the driver package from the <a href="https://wiki.analog.com/university/tools/pluto/drivers/windows" target="_blank">Windows driver page</a> and plug the Pluto in again. On macOS follow the <a href="https://wiki.analog.com/university/tools/pluto/drivers/osx" target="_blank">macOS page</a>, which has no driver to install but explains the network adapter.</p>
+      <p><strong>Step 2, confirm it answers.</strong> Open <code>http://192.168.2.1</code> in a browser. A page served by the Pluto itself appears. If it does not, the network adapter has not come up; unplug, wait ten seconds, plug in again, and on Windows check Device Manager for a device with a warning sign.</p>
+      <p><strong>Step 3, install the software, in this order.</strong> First libiio, from the <a href="https://github.com/analogdevicesinc/libiio/releases" target="_blank">releases page</a> (the <code>.exe</code> for Windows, the <code>.pkg</code> for macOS). Second, in a terminal, <code>pip install pyadi-iio</code>. Third, test from the terminal with <code>iio_info -u ip:192.168.2.1</code>; a long list of devices and channels, including <code>ad9361-phy</code>, means everything works. PySDR chapter 5 shows the same steps with screenshots.</p>
+      <p><strong>Step 4, the capture script.</strong> Save this as <code>capture.py</code>. It is the script that will be used for the whole project, so read every line and the comment next to it.</p>
+<pre>import adi, json, datetime, time
+import numpy as np
+
+FC    = 2412e6     # centre frequency in Hz. 2412e6 is Wi-Fi channel 1. Change it if the team picks another channel.
+FS    = 20e6       # sample rate, 20 million samples per second, enough for one 20 MHz Wi-Fi channel
+GAIN  = 40         # receiver gain in dB, set by hand. Lower it if the signal clips, raise it if you only see noise.
+BUF   = 2**22      # samples per buffer: 4,194,304 samples = 0.21 s at 20 Msps, always at least two beacons
+EVERY = 15         # seconds between buffers
+MINUTES = 10       # how long the recording lasts. Use 1 for the first test in task 1.3, 10 for the real captures.
+
+BOARD = "01"       # the board under test, "01" to "10". Change before each recording.
+POS   = "A"        # receiver position, "A" for the marked spot. Change only if the Pluto is moved.
+
+sdr = adi.Pluto("ip:192.168.2.1")
+sdr.sample_rate             = int(FS)
+sdr.rx_rf_bandwidth         = int(FS)
+sdr.rx_lo                   = int(FC)
+sdr.gain_control_mode_chan0 = "manual"     # automatic gain would change from burst to burst and hide the fingerprint
+sdr.rx_hardwaregain_chan0   = GAIN
+sdr.rx_buffer_size          = BUF
+
+for _ in range(3):
+    sdr.rx()                               # throw away the first buffers while the radio settles
+
+day  = datetime.date.today().strftime("%Y%m%d")
+name = f"board{BOARD}_pos{POS}_day{day}"
+nbuf = MINUTES*60 // EVERY                 # 40 buffers for a 10 minute recording
+
+data  = np.zeros((nbuf, 2, BUF), dtype=np.int16)   # [buffer, I or Q, sample], 16-bit to keep files small
+stamp = np.zeros(nbuf)
+t0 = time.time()
+for k in range(nbuf):
+    x = sdr.rx()                           # one buffer of 0.21 s. Buffers are NOT contiguous in time.
+    data[k, 0] = x.real; data[k, 1] = x.imag
+    stamp[k] = time.time() - t0
+    print(f"buffer {k+1} of {nbuf} at {stamp[k]:5.0f} s, peak amplitude {int(np.abs(x).max())}")
+    while time.time() - t0 &lt; (k+1)*EVERY:
+        time.sleep(0.2)
+
+np.save(name + ".npy", data)
+np.save(name + "_times.npy", stamp)
+json.dump({"board": BOARD, "position": POS, "day": day,
+           "fc_Hz": FC, "fs_Hz": FS, "gain_dB": GAIN,
+           "buffer_len": BUF, "n_buffers": int(nbuf), "seconds_between_buffers": EVERY,
+           "note": "data[k,0] is I and data[k,1] is Q of buffer k; buffers are not contiguous"},
+          open(name + ".json", "w"), indent=1)
+print("saved", name)</pre>
+      <p>The samples come out of the Pluto as 12-bit numbers, so the peak amplitude printed per buffer should sit somewhere between 200 and 1500. Below 50 the gain is too low. At 2047 the converter is clipping and the gain must come down. A 10 minute recording is 40 buffers and about 670 MB on disk, so the laptop used for captures needs about 8 GB free for the ten boards of one day.</p>
+      <p><strong>Step 5, look at it.</strong> For this first test, turn on the hotspot of a phone, set to the 2.4 GHz band if the phone asks, and place the phone next to the Pluto. Set <code>MINUTES = 1</code>, run <code>python capture.py</code>, wait one minute, then in a notebook:</p>
+<pre>import numpy as np, matplotlib.pyplot as plt
+d = np.load("board01_posA_day20261101.npy")           # use the name the script printed
+x = d[0, 0].astype(np.float32) + 1j*d[0, 1].astype(np.float32)   # the first buffer, 0.21 s, back to complex
+
+fig, ax = plt.subplots(2, 1, figsize=(10,7))
+p = np.abs(x)**2
+ax[0].plot(np.arange(len(p))/20e6*1e3, 10*np.log10(p + 1e-3))
+ax[0].set_xlabel("time (ms)"); ax[0].set_ylabel("power (dB)")
+ax[1].specgram(x, NFFT=1024, Fs=20e6, noverlap=512)
+ax[1].set_xlabel("time (s)"); ax[1].set_ylabel("frequency offset from 2412 MHz (Hz)")
+plt.tight_layout(); plt.show()</pre>
+      <p><strong>What you should see.</strong> In the power plot, a low floor with short rectangular bumps standing 20 to 40 dB above it, each a fraction of a millisecond to a few milliseconds long. In the spectrogram, those bumps appear as bright vertical stripes spanning most of the 20 MHz. Each stripe is one Wi-Fi packet. Turn the hotspot off and capture again; most stripes disappear, and whatever remains is the building's own Wi-Fi on the same channel.</p>
+      <p><strong>If it does not work.</strong> "No contexts found" or a timeout on <code>adi.Pluto</code> means the Pluto is not reachable at 192.168.2.1; go back to step 2. A completely flat spectrogram with a peak amplitude under 10 means the antenna is on the TX connector instead of RX, or the gain is far too low. A spectrogram with a thick bright line exactly in the middle at all times is the Pluto's own DC offset; it is normal and the burst detector in week 2 ignores it.</p>
+      <p><strong>Hand in.</strong> A screenshot of the two plots with the hotspot on, named <code>01_notebooks/task13_first_capture.png</code>, plus the <code>.npy</code> and <code>.json</code> of that recording in <code>02_captures/test/</code>.</p>
+      <div class="warn">The Pluto also transmits. <code>capture.py</code> never calls <code>sdr.tx()</code>. Do not run any script that does without the supervisor present.</div>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Task 1.4</span> The two core papers <span class="who">everyone, due 3 Nov</span></h3>
+      <p><strong>Read.</strong> First the review by Soltanieh et al. [1], section II, which separates transient features (the first microseconds when the transmitter switches on) from steady-state features (carrier frequency offset, I/Q imbalance and similar, taken from the body of the packet). Find the sentence that defines steady-state features and write down which impairments it names. Then Brik et al. [2], sections 1 to 3. This is the 2008 paper that told 130 commercial Wi-Fi cards apart from their modulation errors. Find the list of the five features they used and the accuracy they reached. Both PDFs are reachable from the university network through the links in section 8.</p>
+      <p><strong>Write.</strong> Half a page, in your own words, answering three questions. What is the difference between a transient and a steady-state feature. Which feature family does this project measure first and why (the answer is carrier frequency offset, because it needs no detection of the exact turn-on instant and it survives a low sample rate). What does Brik's result say about identical devices of the same model.</p>
+      <p><strong>Hand in.</strong> <code>00_reading/summary_soltanieh_brik_&lt;firstname&gt;.pdf</code>.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label">Task 1.5</span> Where this is used in industry <span class="who">the student from industrial engineering, first list by 3 Nov, final by 10 Nov</span></h3>
+      <p><strong>Why this task exists.</strong> The team has one member from industrial engineering, and her degree requirements are met by what the project does for a factory, a warehouse or a supply chain rather than by the signal processing. This task gives her the reading to find those applications and a deliverable the presentation needs anyway.</p>
+      <p><strong>Read.</strong> Three things, in this order. First the applications part of the survey by Jagannath et al. [3], which lists where device identification by hardware signature has been proposed, from access control to counterfeit detection; make a list of every application it names. Second, Sisinni et al. [4] on the Industrial Internet of Things, in particular its sections on security and on the wireless technologies used on factory floors; look for the sentences that say why industrial wireless devices are hard to secure and which standards are involved. Third, Zanetti et al. [5], which identifies individual RFID tags, the kind used on pallets and products, from their physical-layer signature, and discusses cloning of tags; look for what they say about counterfeit products and supply chains. For context on how industry frames this, the IEC 62443 family of standards on security for industrial automation and control systems is the reference that factories use; its overview pages are enough.</p>
+      <p><strong>Write.</strong> A document of two to three pages, <code>00_reading/industrial_applications.pdf</code>, with three to five applications of this project in industrial engineering. For each application give the setting (which plant, warehouse, port or supply chain), which devices are being identified and why someone would fake one, how the problem is handled today and where that fails, what the fingerprint adds, and what the system of this project would have to measure there (how many devices, what radio, at what distance, how fast a decision is needed). Examples to start from, to be kept only if the reading supports them, are access control of wireless tools and sensors on a factory floor, detection of cloned RFID tags or counterfeit modules entering a supply chain, inventory of wireless assets in a warehouse without relying on declared addresses, and authentication of drones or vehicles entering an industrial site. Pick the one that fits her degree requirements best and say why.</p>
+      <p><strong>Then.</strong> The chosen application becomes the opening example of the presentation (slide 2) and the "real-life application plan" the team will be asked about. In SDP2 it also fixes the numbers in the acceptance targets, since how many devices and how fast a decision is needed come from the application and not from the lab.</p>
+      <p><strong>Hand in.</strong> <code>00_reading/industrial_applications.pdf</code>, and the first list of applications as a one-page draft by 3 Nov for the supervisor's comments.</p>
+    </div>
+
+    <!-- ===================================================== -->
+    <h2 id="week2">4. Week 2, the first classification (4 to 10 Nov)</h2>
+
+    <p>The aim of this week is a working chain from radio to answer, and one plot at the end of it. The chain is capture, find the bursts, measure three numbers per burst, train a classifier on one day, test it on the other day, and show the confusion matrix. To make sure the chain works before the presentation, the first classification is made easy on purpose, since each board is made to announce its own number in a way the Pluto can measure without decoding anything. The real hardware fingerprint, the carrier frequency offset, is measured on the same recordings and comes last, as far as time allows.</p>
+
+    <div class="module">
+      <h3><span class="label b">Task 2.1</span> Ten transmitters that announce who they are <span class="who">due 5 Nov</span></h3>
+      <p><strong>Read.</strong> The <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html" target="_blank">installation page</a> of the Arduino core for ESP32 and the <code>softAP</code> and <code>setTxPower</code> entries of the <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html" target="_blank">Wi-Fi API page</a>.</p>
+      <p><strong>Step 1, the toolchain.</strong> Install the Arduino IDE, add the ESP32 board package as the installation page says, and install the USB serial driver that matches the small chip next to the USB connector (CP210x or CH340, links in section 2). In the IDE choose the board "ESP32 Dev Module" and the port that appears when a board is plugged in. Open File, Examples, WiFi, WiFiAccessPoint and flash it unchanged to one board to confirm the toolchain works; the serial monitor at 115200 baud prints the access point's address.</p>
+      <p><strong>Step 2, how a board announces itself.</strong> An access point with no client connected sends only its beacon, one every 100 ms, and the beacon carries the network name. Decoding that name from raw IQ samples is a project in itself, so the trick is to make the name longer for each board. At the beacon's data rate of 1 Mbit/s every extra character makes the packet 8 microseconds longer, and the length of a burst is something the burst detector of task 2.3 measures for free. Board 01 gets a name two characters longer than the base name, board 02 four characters longer, and so on, so the ten boards produce ten burst lengths 16 microseconds apart. Channel and transmit power stay identical on all boards, so nothing about the hardware fingerprint is touched.</p>
+      <p><strong>Step 3, the firmware.</strong> Replace the example with this sketch and save it as <code>beacon_tx.ino</code>.</p>
+<pre>#include &lt;WiFi.h&gt;
+
+const int BOARD   = 1;     // CHANGE THIS for each board, 1 to 10, before flashing. Nothing else changes.
+const int CHANNEL = 1;     // the same channel on all ten boards, chosen in task 2.2
+
+char ssid[33];             // a Wi-Fi name can be at most 32 characters
+
+void setup() {
+  Serial.begin(115200);
+  int n = snprintf(ssid, sizeof(ssid), "SDP_FP_%02d", BOARD);   // SDP_FP_01 ... SDP_FP_10, 9 characters
+  for (int i = 0; i &lt; 2*BOARD; i++) ssid[n + i] = '-';           // add 2, 4, ... 20 dashes: the board's length code
+  ssid[n + 2*BOARD] = 0;
+  WiFi.mode(WIFI_AP);
+  WiFi.softAP(ssid, nullptr, CHANNEL);                           // open network, no password, fixed channel
+  WiFi.setTxPower(WIFI_POWER_19_5dBm);                           // same transmit power on every board
+  Serial.print("access point started: "); Serial.println(ssid);
+  Serial.print("name length: ");          Serial.println(strlen(ssid));
+  Serial.print("MAC address: ");          Serial.println(WiFi.softAPmacAddress());
+}
+
+void loop() {
+  delay(1000);                                                   // nothing to do; the radio sends beacons by itself
+}</pre>
+      <p><strong>Step 4, flash all ten.</strong> Stick a paper label with a number from 01 to 10 on each board. For each board, set <code>BOARD</code> to its number, flash, open the serial monitor, and copy the printed name length and MAC address into the table <code>03_firmware/board_table.xlsx</code> with columns board number, name length, MAC address, date flashed. Then check on a phone that the network <code>SDP_FP_01--</code>, <code>SDP_FP_02----</code> and so on appears. The MAC addresses are the only way to tell later which recording came from which board if a label falls off.</p>
+      <p><strong>What you should see.</strong> Ten networks on the phone, one at a time as you power each board, each with a longer tail of dashes. With the Pluto running <code>capture.py</code> and one board powered 1 m away, the power plot of task 1.3 shows a bump of about 1 ms every 100 ms, and the bump of board 10 is about 150 microseconds longer than the bump of board 01.</p>
+      <p><strong>Hand in.</strong> <code>03_firmware/beacon_tx.ino</code>, <code>03_firmware/board_table.xlsx</code>, and a photo of the ten labelled boards, <code>03_firmware/boards.jpg</code>.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label b">Task 2.2</span> The capture campaign <span class="who">one sitting on day 1 (5 or 6 Nov) and one on day 2 (9 or 10 Nov)</span></h3>
+      <p><strong>How much work this is.</strong> There is one Pluto, so all the recordings of a day are made in one sitting by whoever has it that day, with a second student keeping the log. Each board is recorded for ten minutes while nobody touches anything, and the only work is swapping the board and changing <code>BOARD</code> in the script between recordings. Ten boards take about two hours including the warm-up. Day 2 is the same sitting repeated at the same tape marks. Nothing else on this page needs the Pluto; every other task works from the files in the shared folder.</p>
+      <p><strong>Choose the channel first.</strong> Install a Wi-Fi analyser app on an Android phone (any app named "WiFi Analyzer" shows a channel graph) and look at the 2.4 GHz band in the room where the captures will be made. Pick the channel with the fewest and weakest networks. In the UAE channels 1 to 13 are allowed. Channel 1 is centred at 2412 MHz, and each channel above it adds 5 MHz, so channel 6 is 2437 MHz and channel 11 is 2462 MHz. Write the chosen channel in the capture log, set <code>CHANNEL</code> in the firmware to it and re-flash all ten boards if it is not 1, and set <code>FC</code> in <code>capture.py</code> to its centre frequency.</p>
+      <p><strong>Set up the room.</strong> Put the Pluto on a table with its RX antenna vertical and mark the position of the Pluto and of the antenna with tape. Mark a second spot 1 m away, on the same table, where the board under test will sit, and mark the orientation of the board with an arrow on the tape. Power the Pluto and let it run <code>capture.py</code> once with <code>MINUTES = 1</code>, then wait ten minutes before the first real recording; the Pluto's own oscillator drifts while it warms up. Turn off the hotspot of every phone in the room.</p>
+      <div class="fig">
+        <svg viewBox="0 0 760 170" role="img" aria-label="Capture layout">
+          <rect x="40" y="40" width="680" height="90" rx="6" fill="#fbfbfb" stroke="#ccc"/>
+          <text class="f-lbl" x="380" y="30" text-anchor="middle">one table, two taped marks, nothing between them</text>
+          <rect x="120" y="70" width="60" height="36" rx="4" fill="#eef3f8" stroke="#9fb8dc"/><text class="f-txt" x="150" y="92" text-anchor="middle">ESP32</text>
+          <text class="f-lbl" x="150" y="122" text-anchor="middle">board under test, one at a time</text>
+          <circle cx="150" cy="88" r="6" fill="none" stroke="#2b6cb0" style="animation: ripple 3s linear infinite;"/>
+          <circle cx="150" cy="88" r="6" fill="none" stroke="#2b6cb0" style="animation: ripple 3s linear infinite 1.5s;"/>
+          <line x1="190" y1="60" x2="520" y2="60" stroke="#999" stroke-dasharray="4 3"/><text class="f-txt" x="355" y="54" text-anchor="middle">1 m, taped</text>
+          <rect x="530" y="72" width="70" height="30" rx="4" fill="#fff" stroke="#444"/><text class="f-txt" x="565" y="92" text-anchor="middle">Pluto</text>
+          <line x1="565" y1="72" x2="565" y2="46" stroke="#444" stroke-width="3"/>
+          <text class="f-lbl" x="565" y="122" text-anchor="middle">RX antenna vertical, position taped</text>
+          <line x1="600" y1="87" x2="640" y2="87" stroke="#999"/><rect x="640" y="70" width="60" height="34" rx="4" fill="#f4f4f4" stroke="#bbb"/><text class="f-txt" x="670" y="91" text-anchor="middle">laptop</text>
+        </svg>
+        <div class="cap">The layout for every recording. Only the board changes between recordings; the Pluto, the antenna, the distance and the orientation stay as taped. On day 2 the same tape marks are used again.</div>
+      </div>
+      <p><strong>The procedure, for each board.</strong> The board is powered through a USB power bank or a phone charger, never through the laptop, so that the laptop's own noise stays out of the picture. All other boards are unpowered and at least 2 m away. In <code>capture.py</code> set <code>BOARD</code> and <code>MINUTES = 10</code>, run it, and check that the peak amplitude printed for the first buffers is in the 200 to 1500 range. Leave it alone for ten minutes. When it prints "saved", write the line in the log, unplug the board, plug in the next one, and start again. Ten boards, ten recordings per day, about 670 MB each, about 7 GB per day. Do the whole set a second time on day 2 with the same tape marks and the same gain. If OneDrive is too slow for the raw files, keep them on one external drive that travels with the Pluto and upload only the smaller files produced by tasks 2.3 to 2.5.</p>
+      <p><strong>The capture log</strong> is <code>02_captures/capture_log.xlsx</code> with one row per recording and these columns.</p>
+      <table>
+        <tr><th>file name</th><th>board</th><th>date</th><th>start time</th><th>channel</th><th>gain dB</th><th>peak amplitude</th><th>who recorded</th><th>anything unusual</th></tr>
+        <tr><td><code>board01_posA_day20261105</code></td><td>01</td><td>5 Nov</td><td>10:12</td><td>1</td><td>40</td><td>780</td><td>name</td><td>none</td></tr>
+      </table>
+      <p><strong>What you should see.</strong> Each file, opened with the task 1.3 notebook, shows two bumps of about 1 ms per 0.21 s buffer, so about eighty per file, and nothing else if the channel is quiet. A file with many extra bumps of different lengths has another network on the channel; note it in the log and record that board again.</p>
+      <p><strong>Hand in.</strong> Ten recordings with their <code>.json</code> and <code>_times.npy</code> files in <code>02_captures/day1/</code>, ten more in <code>02_captures/day2/</code>, and the filled log.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label b">Task 2.3</span> Find the bursts and measure three numbers per burst <span class="who">due 7 Nov with the day 1 files, re-run on 10 Nov with day 2</span></h3>
+      <p><strong>What this does.</strong> A recording is mostly silence with short bursts. The first step finds where each burst starts and ends, by computing the power of each sample, smoothing it, and marking where it rises above a threshold set from the silent parts. The second step measures three numbers for each burst and writes one row per burst to a table. The three numbers are the burst length in microseconds (the board's announced number from task 2.1), the mean power in dB (which should be about the same for all boards, since transmit power and distance are fixed), and the carrier frequency offset in Hz (the hardware fingerprint, explained in task 2.5). Everything after this task works from that table and never touches the raw files again.</p>
+<pre>import numpy as np, json, glob, os
+import pandas as pd
+
+def load_buffer(d, k):
+    """Buffer k of a recording, back to complex numbers."""
+    return d[k, 0].astype(np.float32) + 1j*d[k, 1].astype(np.float32)
+
+def find_bursts(x, fs, win=200, k=10, min_len_s=200e-6):
+    """Return a list of (start, end) sample indices of bursts in the complex array x."""
+    p   = np.abs(x)**2
+    env = np.convolve(p, np.ones(win)/win, mode="same")   # smooth over 200 samples = 10 µs
+    thr = k * np.median(env)                              # the median is the silence level; bursts are far above it
+    on  = env &gt; thr
+    edges  = np.diff(on.astype(int))
+    starts = np.where(edges ==  1)[0]
+    ends   = np.where(edges == -1)[0]
+    if len(ends) and len(starts) and ends[0] &lt; starts[0]:
+        ends = ends[1:]                                   # a burst already in progress at sample 0 is dropped
+    n = min(len(starts), len(ends))
+    return [(s, e) for s, e in zip(starts[:n], ends[:n]) if (e - s) &gt; min_len_s*fs]
+
+def cfo_hz(burst, fs, nfft=2**20):
+    """Carrier frequency offset of one burst, in Hz, by the squaring method (explained in task 2.5)."""
+    y = burst / np.abs(burst).max()
+    z = y**2
+    Z = np.abs(np.fft.fft(z, nfft))
+    f = np.fft.fftfreq(nfft, 1/fs)
+    return f[np.argmax(Z)] / 2
+
+rows = []
+for day in ["day1", "day2"]:
+    for fpath in sorted(glob.glob(f"02_captures/{day}/board*_pos*_day*.npy")):
+        if fpath.endswith("_times.npy"):
+            continue
+        meta  = json.load(open(fpath.replace(".npy", ".json")))
+        times = np.load(fpath.replace(".npy", "_times.npy"))
+        d  = np.load(fpath); fs = meta["fs_Hz"]
+        for k in range(d.shape[0]):
+            x = load_buffer(d, k)
+            for s, e in find_bursts(x, fs):
+                b = x[s:e]
+                rows.append(dict(day=day, board=int(meta["board"]), buffer=k, t_s=float(times[k]),
+                                 length_us=(e - s)/fs*1e6,
+                                 power_dB=10*np.log10(np.mean(np.abs(b)**2)),
+                                 cfo_Hz=cfo_hz(b, fs)))
+        print(fpath, "bursts so far:", len(rows))
+
+df = pd.DataFrame(rows)
+df.to_csv("02_captures/features_per_burst.csv", index=False)
+print(df.groupby(["day", "board"]).agg(n=("length_us", "size"),
+                                      length_us=("length_us", "median"),
+                                      power_dB=("power_dB", "mean"),
+                                      cfo_kHz=("cfo_Hz", lambda v: np.median(v)/1e3)).round(1))</pre>
+      <p><strong>What you should see.</strong> About eighty bursts per recording, each between 0.8 and 1.2 ms long. The printed summary should show the median length growing by about 16 microseconds from one board to the next, the mean power within a decibel or two across boards, and a CFO of a few kilohertz to a few tens of kilohertz that differs from board to board. Plot the power of one buffer with the detected start and end marked as vertical lines to confirm by eye that the marks sit at the edges of the bumps. A recording reporting zero bursts has the threshold too high or the recording empty; one reporting hundreds has interference or a threshold too low. Change <code>k</code> and look again before changing anything else. This script takes a while on 7 GB of files; run it once per day of captures and keep the CSV.</p>
+      <p><strong>Hand in.</strong> <code>01_notebooks/task23_features.ipynb</code> with the summary table and the plot of one buffer with its marks, and <code>02_captures/features_per_burst.csv</code>.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label b">Task 2.4</span> The easy classifier <span class="who">first version by 8 Nov with day 1 only, final by 10 Nov with both days</span></h3>
+      <p><strong>Read.</strong> The scikit-learn pages on <a href="https://scikit-learn.org/stable/modules/neighbors.html#classification" target="_blank">nearest neighbours classification</a> and on the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html" target="_blank">confusion matrix display</a>. Install with <code>pip install scikit-learn pandas</code>.</p>
+      <p><strong>What this does.</strong> A classifier is a function that takes measured numbers and returns a board number. The simplest one looks up the training bursts closest to the new burst and returns their board. Trained on the day 1 bursts and tested on the day 2 bursts, using only the burst length, it should get almost every burst right, since the ten lengths are 16 microseconds apart and the measurement noise is a microsecond or two. The confusion matrix shows, for each true board, which board the classifier answered, and a correct classifier shows a diagonal. The same code is then run with the mean power as the feature, which should fail, since all boards transmit the same power; that failure is worth a sentence on the slide, because it shows that a feature has to differ between boards and stay the same for one board.</p>
+<pre>import pandas as pd, numpy as np, matplotlib.pyplot as plt
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, ConfusionMatrixDisplay
+
+df = pd.read_csv("02_captures/features_per_burst.csv")
+train = df[df.day == "day1"]; test = df[df.day == "day2"]     # with day 1 only, use train_test_split instead
+
+def run(feature_cols, title):
+    clf = KNeighborsClassifier(n_neighbors=5)
+    clf.fit(train[feature_cols].values, train.board.values)
+    pred = clf.predict(test[feature_cols].values)
+    acc  = accuracy_score(test.board.values, pred)
+    fig, ax = plt.subplots(figsize=(6,6))
+    ConfusionMatrixDisplay.from_predictions(test.board.values, pred, ax=ax, colorbar=False)
+    ax.set_title(f"{title}: accuracy {100*acc:.1f} %")
+    fig.savefig(f"04_slides/fig_confusion_{'_'.join(feature_cols)}.png", dpi=200, bbox_inches="tight")
+    plt.show()
+    return acc
+
+run(["length_us"], "burst length (the announced number)")
+run(["power_dB"],  "mean power (should fail)")
+
+plt.figure(figsize=(10,4))
+for day, c in [("day1", "#2b6cb0"), ("day2", "#d69e2e")]:
+    s = df[df.day == day]
+    plt.scatter(s.board + (0.1 if day == "day2" else -0.1), s.length_us, s=6, color=c, label=day)
+plt.xticks(range(1, 11)); plt.xlabel("board"); plt.ylabel("burst length (µs)"); plt.legend(); plt.grid(alpha=.3)
+plt.savefig("04_slides/fig_length_per_board.png", dpi=200, bbox_inches="tight"); plt.show()</pre>
+      <p><strong>What you should see.</strong> For the burst length, a diagonal confusion matrix and an accuracy above 99 percent, and a scatter plot with ten flat clouds climbing in steps of 16 microseconds. For the power, a confusion matrix smeared everywhere and an accuracy near 10 percent, which is chance for ten boards. If the length classifier is also near chance, the burst detector is cutting bursts inconsistently; go back to task 2.3 and look at the marks on a buffer before anything else.</p>
+      <p><strong>Hand in.</strong> <code>01_notebooks/task24_easy_classifier.ipynb</code>, <code>04_slides/fig_confusion_length_us.png</code>, <code>04_slides/fig_confusion_power_dB.png</code>, <code>04_slides/fig_length_per_board.png</code>.</p>
+    </div>
+
+    <div class="module">
+      <h3><span class="label c">Task 2.5</span> The real fingerprint: carrier frequency offset <span class="who">as far as time allows, by 10 Nov</span></h3>
+      <p><strong>Read.</strong> The carrier frequency offset discussion in Shen et al. [6], which shows that CFO separates devices well on one day and drifts between days with temperature, so that a classifier relying on it alone degrades. Keep that in mind when you look at your day 2 result. Re-read the I and Q section of <a href="/sdp1.html#basics">Part 1</a>, where the rotation of the clock hand is the CFO.</p>
+      <p><strong>What the number in the table is.</strong> The ESP32 transmits its beacon at 1 Mbit/s using a scheme where the phase of the wave flips by 180 degrees from bit to bit. Squaring the signal removes those flips, since a flip of 180 degrees becomes a flip of 360 degrees, which is no flip at all. What remains after squaring is a pure tone at twice the carrier frequency offset. An FFT of the squared burst therefore has one sharp peak, and its frequency divided by two is the CFO of that burst; that is what <code>cfo_hz</code> in task 2.3 computes. The Pluto's own oscillator adds a constant offset to every board, which is why only the differences between boards matter, and why the Pluto must not be restarted between boards on the same day. Unlike the burst length, nobody programmed this number; it comes from the crystal on each board.</p>
+      <p><strong>Run.</strong> The same notebook as task 2.4, with the CFO as the feature, plus the plot of CFO per board over the two days.</p>
+<pre>run(["cfo_Hz"], "carrier frequency offset (the hardware fingerprint)")
+
+plt.figure(figsize=(10,5))
+for day, c in [("day1", "#2b6cb0"), ("day2", "#d69e2e")]:
+    s = df[df.day == day]
+    plt.scatter(s.board + (0.1 if day == "day2" else -0.1), s.cfo_Hz/1e3, s=6, color=c, label=day)
+plt.xticks(range(1, 11)); plt.xlabel("board"); plt.ylabel("carrier frequency offset (kHz)")
+plt.legend(); plt.grid(alpha=.3); plt.title("CFO per burst, ten identical ESP32 boards")
+plt.savefig("04_slides/fig_cfo_per_board.png", dpi=200, bbox_inches="tight"); plt.show()
+
+# the drift of one board over its ten minutes of recording
+s = df[(df.day == "day1") &amp; (df.board == 1)]
+plt.figure(figsize=(8,3)); plt.plot(s.t_s/60, s.cfo_Hz/1e3, ".")
+plt.xlabel("minutes since power-up"); plt.ylabel("CFO (kHz)"); plt.title("board 01 warming up"); plt.grid(alpha=.3)
+plt.savefig("04_slides/fig_cfo_warmup.png", dpi=200, bbox_inches="tight"); plt.show()</pre>
+      <p><strong>What you should see.</strong> Values of a few kilohertz to a few tens of kilohertz, since a 40 MHz crystal with a tolerance of 10 parts per million puts the 2.4 GHz carrier up to 24 kHz off. For one board on one day the bursts should cluster within a few hundred hertz of each other, with a slow slide during the first minutes as the board warms up. Different boards should sit at different values, so that the plot shows ten small clouds at ten heights. On day 2 each board's cloud should sit near its day 1 cloud but not exactly on it; the shift is the temperature drift Shen et al. describe [6], and it is why the CFO classifier trained on day 1 and tested on day 2 will score below the easy one. If two boards overlap on the same day, that is a true result and it goes on the slide as it is, since it shows why one feature is not enough and why SDP2 adds more features and a neural network. If all boards show the same value, check one burst by hand before anything else.</p>
+      <div class="fig">
+        <svg viewBox="0 0 760 230" role="img" aria-label="Sketch of the expected CFO plot">
+          <line x1="60" y1="190" x2="730" y2="190" stroke="#bbb"/><line x1="60" y1="190" x2="60" y2="20" stroke="#bbb"/>
+          <text class="f-lbl" x="400" y="215" text-anchor="middle">board</text>
+          <text class="f-lbl" x="20" y="105" text-anchor="middle" transform="rotate(-90 20 105)">CFO (kHz)</text>
+          <g class="f-lbl">
+            <text x="120" y="205" text-anchor="middle">01</text><text x="186" y="205" text-anchor="middle">02</text><text x="252" y="205" text-anchor="middle">03</text><text x="318" y="205" text-anchor="middle">04</text><text x="384" y="205" text-anchor="middle">05</text><text x="450" y="205" text-anchor="middle">06</text><text x="516" y="205" text-anchor="middle">07</text><text x="582" y="205" text-anchor="middle">08</text><text x="648" y="205" text-anchor="middle">09</text><text x="714" y="205" text-anchor="middle">10</text>
+          </g>
+          <g fill="#2b6cb0" opacity=".8">
+            <ellipse cx="114" cy="70" rx="6" ry="7"/><ellipse cx="180" cy="140" rx="6" ry="6"/><ellipse cx="246" cy="48" rx="6" ry="8"/><ellipse cx="312" cy="110" rx="6" ry="6"/><ellipse cx="378" cy="160" rx="6" ry="7"/><ellipse cx="444" cy="92" rx="6" ry="6"/><ellipse cx="510" cy="130" rx="6" ry="7"/><ellipse cx="576" cy="36" rx="6" ry="6"/><ellipse cx="642" cy="118" rx="6" ry="6"/><ellipse cx="708" cy="78" rx="6" ry="7"/>
+          </g>
+          <g fill="#d69e2e" opacity=".8">
+            <ellipse cx="126" cy="76" rx="6" ry="7"/><ellipse cx="192" cy="146" rx="6" ry="6"/><ellipse cx="258" cy="56" rx="6" ry="8"/><ellipse cx="324" cy="114" rx="6" ry="6"/><ellipse cx="390" cy="166" rx="6" ry="7"/><ellipse cx="456" cy="100" rx="6" ry="6"/><ellipse cx="522" cy="134" rx="6" ry="7"/><ellipse cx="588" cy="44" rx="6" ry="6"/><ellipse cx="654" cy="112" rx="6" ry="6"/><ellipse cx="720" cy="86" rx="6" ry="7"/>
+          </g>
+          <rect x="560" y="16" width="10" height="10" fill="#2b6cb0"/><text class="f-lbl" x="576" y="25">day 1</text>
+          <rect x="620" y="16" width="10" height="10" fill="#d69e2e"/><text class="f-lbl" x="636" y="25">day 2</text>
+          <text class="f-lbl" x="400" y="40" text-anchor="middle">each cloud is about eighty bursts of one board</text>
+        </svg>
+        <div class="cap">A sketch of what the plot may look like, not data. Ten boards at ten different offsets, each a tight cloud, with day 2 shifted a little from day 1. Boards 04 and 09 are drawn close on purpose, since the real plot may well have such a pair.</div>
+      </div>
+      <p><strong>Hand in.</strong> <code>04_slides/fig_confusion_cfo_Hz.png</code>, <code>04_slides/fig_cfo_per_board.png</code>, <code>04_slides/fig_cfo_warmup.png</code>, and the task 2.4 notebook extended with this part.</p>
+    </div>
+
+    <!-- ===================================================== -->
+    <h2 id="week3">5. Week 3, the presentation (11 to 16 Nov)</h2>
+
+    <p>The presentation lasts 15 minutes plus questions, it is built in <code>04_slides/</code>, and every number, plot and photo on a slide must come from a file in the shared folder. The team decides who makes which slide and who assembles the file; the parts are delivered by Wednesday 11 Nov. The rehearsal with the supervisor is on Thursday 12 Nov, timed, with each student presenting her own slides. The literature slides must cite with numbers in the order the references appear, as in this page.</p>
+
+    <table>
+      <tr><th style="width:6%">#</th><th style="width:30%">Slide</th><th>What is on it and where it comes from</th></tr>
+      <tr><td>1</td><td>Title</td><td>Project title as in the proposal, the four names, the supervisor, the department, the date.</td></tr>
+      <tr><td>2</td><td>The problem</td><td>The industrial application chosen in task 1.5 as the opening example, then why identification by MAC address or credentials fails against a device that copies them, in two sentences, and the other settings where that matters (drone controllers, IoT authentication, spectrum security). From <code>industrial_applications.pdf</code>, the proposal abstract and <a href="/sdp1.html#basics">Part 1</a>.</td></tr>
+      <tr><td>3</td><td>What an RF fingerprint is</td><td>The two-boards figure from Part 1, redrawn or screenshotted, and the sentence that the signature comes from manufacturing tolerances in the analog front end and cannot be changed in software.</td></tr>
+      <tr><td>4</td><td>Literature, features</td><td>Transient versus steady-state features from Soltanieh et al. [1]; the 2008 result of Brik et al. [2] on commercial Wi-Fi cards. One figure from [1] with its source named.</td></tr>
+      <tr><td>5</td><td>Literature, deep learning</td><td>Convolutional networks on raw IQ, from Riyaz et al. [7] as the introduction and Sankhe et al. [8], which identified 16 identical radios from raw IQ, as the design closest to SDP2.</td></tr>
+      <tr><td>6</td><td>Literature, the open problem</td><td>Accuracy collapses across days and receiver positions, from Al-Shawabka et al. [9]; the public multi-day, multi-receiver dataset of Hanna et al. [10] as the benchmark SDP2 will compare against; the survey by Jagannath et al. [3] for the list of open challenges. This slide is what justifies work package 4 of the proposal.</td></tr>
+      <tr><td>7</td><td>System overview</td><td>The four work packages of the proposal as four boxes (capture, classify, deploy, generalize), with SDP1 covering the first box and the start of the second, and SDP2 the rest.</td></tr>
+      <tr><td>8</td><td>Hardware</td><td>Photo of the ten labelled boards and the Pluto (<code>03_firmware/boards.jpg</code>), one line per item saying what it does, and the purchase total from the progress report.</td></tr>
+      <tr><td>9</td><td>Capture protocol</td><td>The layout figure of task 2.2, the parameters (channel, 20 Msps, gain, ten minutes per board, two days) and the file naming rule. The number of recordings and of bursts, from the log and the feature table.</td></tr>
+      <tr><td>10</td><td>From bursts to numbers</td><td>The power plot of one buffer with the detected bursts marked, from task 2.3, and the three numbers measured per burst, with one sentence each on where they come from (one programmed, one fixed by the setup, one from the hardware).</td></tr>
+      <tr><td>11</td><td>The easy classifier</td><td><code>fig_length_per_board.png</code> and the two confusion matrices of task 2.4 side by side, with the two accuracies. Two sentences on why the length works and the power does not.</td></tr>
+      <tr><td>12</td><td>The hardware fingerprint</td><td><code>fig_cfo_per_board.png</code> full width and, if task 2.5 was completed, its confusion matrix and the warm-up plot. Three sentences on what it shows, including any pair of boards that overlap and the day 1 to day 2 shift. This is the slide the examiners will ask about.</td></tr>
+      <tr><td>13</td><td>What SDP2 builds</td><td>Feature classifier on CFO plus I/Q imbalance and transient features, a convolutional network on raw IQ, quantization and deployment on the ESP32-S3 boards already bought, and the cross-day and cross-position study. A Gantt chart from January to the SDP2 deadline.</td></tr>
+      <tr><td>14</td><td>Acceptance targets</td><td>The table of section 6, stated as the targets SDP2 is measured against, next to the accuracies obtained this semester.</td></tr>
+      <tr><td>15</td><td>Risks</td><td>Clean recordings, channel changes versus device changes, model size on the ESP32-S3, from section seven of the progress report, each with the action taken against it.</td></tr>
+      <tr><td>16</td><td>Summary and questions</td><td>Three lines, nothing new.</td></tr>
+    </table>
+
+    <p><strong>Rules for the slides.</strong> Every plot has labelled axes with units. Every number has a source file. Every figure taken from a paper names the paper on the slide. No slide has more than six lines of text. Practice answering these five questions, which will be asked: why the burst length is not a fingerprint while the CFO is, why the CFO cannot be changed in software, what changes between day 1 and day 2, why 20 Msps is enough, and what the classifier in SDP2 will take as input.</p>
+
+    <!-- ===================================================== -->
+    <h2 id="targets">6. Acceptance targets for SDP2</h2>
+
+    <p>The progress report left the numerical targets open. The following are proposed by the supervisor and go on slide 13 as the targets SDP2 is measured against, unless the rehearsal changes them.</p>
+    <table>
+      <tr><th style="width:44%">Measurement</th><th>Target</th></tr>
+      <tr><td>Identification accuracy over the ten boards, trained and tested on bursts from the same day, with the test bursts held out</td><td>above 95 percent</td></tr>
+      <tr><td>Identification accuracy when trained on day 1 and tested on day 2, feature-based classifier</td><td>above 80 percent</td></tr>
+      <tr><td>Convolutional network on raw IQ, same two tests</td><td>at least as good as the feature-based classifier on both</td></tr>
+      <tr><td>Inference time per burst on the ESP32-S3, quantized model</td><td>below 100 ms</td></tr>
+      <tr><td>Model size on the ESP32-S3</td><td>fits in the board's flash and RAM with the capture code running alongside</td></tr>
+    </table>
+
+    <!-- ===================================================== -->
+    <h2 id="checklist">7. Checklist</h2>
+
+    <p>One student keeps a copy of this table as the first sheet of <code>capture_log.xlsx</code> and writes the names in the owner column and updates the status column; the supervisor reads that sheet, not this page, to see where the team is.</p>
+    <table>
+      <tr><th>Task</th><th style="width:14%">Owner (team decides)</th><th>Due</th><th>Deliverable in the shared folder</th><th style="width:12%">Status</th></tr>
+      <tr><td>Create folder and subfolders</td><td></td><td>28 Oct</td><td>the five subfolders, shared with everyone</td><td></td></tr>
+      <tr><td>1.1 Python and the FFT</td><td></td><td>30 Oct</td><td><code>01_notebooks/task11_&lt;firstname&gt;.ipynb</code>, four files</td><td></td></tr>
+      <tr><td>1.2 IQ samples</td><td></td><td>31 Oct</td><td><code>01_notebooks/task12_&lt;firstname&gt;.ipynb</code>, four files</td><td></td></tr>
+      <tr><td>1.3 The Pluto receives</td><td></td><td>2 Nov</td><td><code>task13_first_capture.png</code>, test recording in <code>02_captures/test/</code></td><td></td></tr>
+      <tr><td>1.5 Industrial applications, first list</td><td></td><td>3 Nov</td><td>one-page draft in <code>00_reading/</code></td><td></td></tr>
+      <tr><td>1.4 The two core papers</td><td></td><td>3 Nov</td><td><code>00_reading/summary_soltanieh_brik_&lt;firstname&gt;.pdf</code>, four files</td><td></td></tr>
+      <tr><td>2.1 Ten transmitters that announce who they are</td><td></td><td>5 Nov</td><td><code>beacon_tx.ino</code>, <code>board_table.xlsx</code>, <code>boards.jpg</code></td><td></td></tr>
+      <tr><td>2.2 Capture day 1</td><td></td><td>6 Nov</td><td>ten recordings in <code>02_captures/day1/</code>, log filled</td><td></td></tr>
+      <tr><td>2.3 Bursts and features, day 1</td><td></td><td>7 Nov</td><td><code>task23_features.ipynb</code>, <code>features_per_burst.csv</code></td><td></td></tr>
+      <tr><td>2.4 Easy classifier, day 1 only</td><td></td><td>8 Nov</td><td>first confusion matrix</td><td></td></tr>
+      <tr><td>2.2 Capture day 2</td><td></td><td>10 Nov</td><td>ten recordings in <code>02_captures/day2/</code>, log filled</td><td></td></tr>
+      <tr><td>2.3 and 2.4 re-run with both days</td><td></td><td>10 Nov</td><td><code>fig_confusion_length_us.png</code>, <code>fig_confusion_power_dB.png</code>, <code>fig_length_per_board.png</code></td><td></td></tr>
+      <tr><td>2.5 CFO, as far as time allows</td><td></td><td>10 Nov</td><td><code>fig_cfo_per_board.png</code>, <code>fig_confusion_cfo_Hz.png</code>, <code>fig_cfo_warmup.png</code></td><td></td></tr>
+      <tr><td>1.5 Industrial applications, final</td><td></td><td>10 Nov</td><td><code>00_reading/industrial_applications.pdf</code></td><td></td></tr>
+      <tr><td>Slide parts delivered</td><td></td><td>11 Nov</td><td>each owner's slides in <code>04_slides/</code></td><td></td></tr>
+      <tr><td>Rehearsal</td><td></td><td>12 Nov</td><td>timed run with the supervisor</td><td></td></tr>
+      <tr><td>Final slides</td><td></td><td>15 Nov</td><td><code>SDP1_RF_Fingerprinting_presentation.pptx</code></td><td></td></tr>
+      <tr><td>Reimbursement documents</td><td></td><td>15 Nov</td><td>submitted, supervisor in copy</td><td></td></tr>
+    </table>
+
+    <!-- ===================================================== -->
+    <h2 id="refs">8. References</h2>
+    <p>Numbered in the order they first appear on this page. The reading list of <a href="/sdp1.html#reading">Part 1</a> has most of these papers with a note on each.</p>
+    <ol>
+      <li>N. Soltanieh, Y. Norouzi, Y. Yang, and N. C. Karmakar, "A review of radio frequency fingerprinting techniques," <em>IEEE Journal of Radio Frequency Identification</em>, vol. 4, no. 3, pp. 222–233, 2020. <a href="https://doi.org/10.1109/JRFID.2020.2968369" target="_blank">doi:10.1109/JRFID.2020.2968369</a></li>
+      <li>V. Brik, S. Banerjee, M. Gruteser, and S. Oh, "Wireless device identification with radiometric signatures," in <em>Proceedings of the 14th ACM International Conference on Mobile Computing and Networking (MobiCom)</em>, 2008. <a href="https://doi.org/10.1145/1409944.1409959" target="_blank">doi:10.1145/1409944.1409959</a></li>
+      <li>A. Jagannath, J. Jagannath, and P. S. P. Vasanth Kumar, "A comprehensive survey on radio frequency (RF) fingerprinting: Traditional approaches, deep learning, and open challenges," <em>Computer Networks</em>, vol. 219, art. 109455, 2022. <a href="https://doi.org/10.1016/j.comnet.2022.109455" target="_blank">doi:10.1016/j.comnet.2022.109455</a></li>
+      <li>E. Sisinni, A. Saifullah, S. Han, U. Jennehag, and M. Gidlund, "Industrial Internet of Things: Challenges, opportunities, and directions," <em>IEEE Transactions on Industrial Informatics</em>, vol. 14, no. 11, pp. 4724–4734, 2018. <a href="https://doi.org/10.1109/TII.2018.2852491" target="_blank">doi:10.1109/TII.2018.2852491</a></li>
+      <li>D. Zanetti, B. Danev, and S. Čapkun, "Physical-layer identification of UHF RFID tags," in <em>Proceedings of the 16th Annual International Conference on Mobile Computing and Networking (MobiCom)</em>, 2010. <a href="https://doi.org/10.1145/1859995.1860035" target="_blank">doi:10.1145/1859995.1860035</a></li>
+      <li>G. Shen, J. Zhang, A. Marshall, L. Peng, and X. Wang, "Radio frequency fingerprint identification for LoRa using deep learning," <em>IEEE Journal on Selected Areas in Communications</em>, vol. 39, no. 8, pp. 2604–2616, 2021. <a href="https://doi.org/10.1109/JSAC.2021.3087250" target="_blank">doi:10.1109/JSAC.2021.3087250</a></li>
+      <li>S. Riyaz, K. Sankhe, S. Ioannidis, and K. Chowdhury, "Deep learning convolutional neural networks for radio identification," <em>IEEE Communications Magazine</em>, vol. 56, no. 9, pp. 146–152, 2018. <a href="https://doi.org/10.1109/MCOM.2018.1800153" target="_blank">doi:10.1109/MCOM.2018.1800153</a></li>
+      <li>K. Sankhe, M. Belgiovine, F. Zhou, S. Riyaz, S. Ioannidis, and K. Chowdhury, "ORACLE: Optimized Radio clAssification through Convolutional neuraL nEtworks," in <em>IEEE INFOCOM 2019</em>. <a href="https://doi.org/10.1109/INFOCOM.2019.8737463" target="_blank">doi:10.1109/INFOCOM.2019.8737463</a></li>
+      <li>A. Al-Shawabka, F. Restuccia, S. D'Oro, T. Jian, B. Costa Rendon, N. Soltani, J. Dy, S. Ioannidis, K. Chowdhury, and T. Melodia, "Exposing the fingerprint: Dissecting the impact of the wireless channel on radio fingerprinting," in <em>IEEE INFOCOM 2020</em>. <a href="https://doi.org/10.1109/INFOCOM41043.2020.9155259" target="_blank">doi:10.1109/INFOCOM41043.2020.9155259</a></li>
+      <li>S. Hanna, S. Karunaratne, and D. Cabric, "WiSig: A large-scale WiFi signal dataset for receiver and channel agnostic RF fingerprinting," <em>IEEE Access</em>, vol. 10, pp. 22808–22818, 2022. <a href="https://doi.org/10.1109/ACCESS.2022.3154790" target="_blank">doi:10.1109/ACCESS.2022.3154790</a></li>
+    </ol>
+
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+    <ul class="pager">
+      <li class="previous"><a href="/sdp1.html"><span aria-hidden="true">&larr;</span> Part 1</a></li>
+      <li class="next"><a href="/">Back to home</a></li>
+    </ul>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </div>
+</footer>
+
+<script src="/js/jquery-1.12.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/hugo-academic.js"></script>
+
+<script>
+(function(){
+  var bar=document.getElementById('readbar');
+  function prog(){var h=document.documentElement;var p=(h.scrollTop||document.body.scrollTop)/((h.scrollHeight-h.clientHeight)||1);bar.style.width=(p*100)+'%';}
+  window.addEventListener('scroll',prog);prog();
+  var els=document.querySelectorAll('.sdp h2, .sdp h3, .sdp p, .sdp table, .sdp ol, .sdp ul, .sdp pre, .sdp .fig, .sdp .box, .sdp .warn, .sdp .ok');
+  els.forEach(function(e){e.classList.add('reveal');});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  } else { els.forEach(function(e){e.classList.add('on');}); }
+  document.querySelectorAll('.sdp .module h3').forEach(function(h){h.addEventListener('click',function(){h.parentNode.classList.toggle('closed');});});
+  var toc=document.getElementById('minitoc'); var hs=document.querySelectorAll('.sdp h2[id]');
+  if(toc){hs.forEach(function(h){var a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+    function cur(){var y=window.scrollY+120,c=null;hs.forEach(function(h){if(h.offsetTop<=y)c=h.id;});toc.querySelectorAll('a').forEach(function(a){a.classList.toggle('cur',a.getAttribute('href')==='#'+c);});}
+    window.addEventListener('scroll',cur);cur();}
+})();
+</script>
+</body>
+</html>
